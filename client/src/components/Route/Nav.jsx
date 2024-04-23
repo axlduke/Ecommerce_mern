@@ -2,7 +2,7 @@ import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 
 const Nav = () => {
     return (
-        <div>
+        <div className="fixed top-0 w-full bg-white shadow-md z-10">
             {/*margin for navigation */}
             <div className='m-3'> 
                 <div className="flex justify-between">
@@ -16,13 +16,13 @@ const Nav = () => {
                         </div>
                     </div>
 
-                    <div className="bg-gray-300 w-auto px-3 py-1 rounded-full">
-                        <div className="text-sm">
+                    <div className="bg-[#eff3fa] w-auto px-3 py-1 rounded-full">
+                        <div className="text-sm text-[#0d0a0a]">
                             <ul className="flex space-x-5 inline-block">
                                 <li className="bg-white rounded-full px-2 py-0.5">Home</li>
                                 <li className="">About</li>
                                 <li className="">Store</li>
-                                <li className="bg-white rounded-full px-2">Sale</li>
+                                <li className="">Sale</li>
                             </ul>
                         </div>
                     </div>
