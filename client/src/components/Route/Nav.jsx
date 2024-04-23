@@ -17,7 +17,7 @@ const Nav = () => {
                     </div>
 
                     <div className="bg-[#eff3fa] w-auto px-3 py-1 rounded-full">
-                        <div className="text-sm text-[#0d0a0a]">
+                        <div className="text-sm font-sans text-[#0d0a0a]">
                             <ul className="flex space-x-5 inline-block">
                                 <li className="bg-white rounded-full px-2 py-0.5">Home</li>
                                 <li className="">About</li>

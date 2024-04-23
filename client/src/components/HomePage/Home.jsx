@@ -1,23 +1,38 @@
 import Nav from "../Route/Nav"
 import furniture1 from '../../assets/furniture1.png'
 import furniture2 from '../../assets/furniture2.png'
+import chair from '../../assets/Options/chair.png'
+import sofa from '../../assets/Options/sofa.png'
+import cabinet from '../../assets/Options/cabinet.png'
+import wardrobe from '../../assets/Options/wardrobe.png'
+import armchair from '../../assets/Options/armchair.png'
+
 
 function Home() {
+
+    const OptionImage = [
+        { name: 'Chair', src: chair},
+        { name: 'sofa', src: sofa},
+        { name: 'cabinet', src: cabinet},
+        { name: 'wardrobe', src: wardrobe},
+        { name: 'armchair', src: armchair},
+    ]
+
     return (
         <div>
             <Nav />
-            <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-3 lg:space-y-4 xl:space-y-5">
+            <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-3 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
 
                 <div className="min-w-min lg:h-80 bg-[rgb(88,115,190)] rounded-md">
                     <div className="flex justify-center">
-                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-6xl lg:text-7xl xl:text-8xl">
+                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-6xl lg:text-7xl xxl:text-7xl 2xl:text-8xl">
                             Modern Minimalist Furniture
                         </h1>
                     </div>
-                    <div className="absolute mt-6 right-24">
-                        <p className="text-white">
-                            Discover a curated collection of handcrafted pieces designed<br/>to transform your
-                            living spaces into expressions of your<br/>unique taste and lifestyle.
+                    <div className="absolute mt-6 lg:right-6 xl:right-24 xxl:right-5">
+                        <p className="text-white xs: md:w-[100px] lg:w-[450px] xl:w-[550px] xxl:w-[530px] 2xl:w-[630px] text-justify">
+                            Discover a curated collection of handcrafted pieces designed to transform your
+                            living spaces into expressions of your unique taste and lifestyle.
                         </p>
                         <button className="lg:mt-6 xl:mt-7 text-[#0d0a0a] bg-[#ffd873] px-6 py-2 rounded-full">
                             Explore More
@@ -26,21 +41,24 @@ function Home() {
                 </div>
 
                 <div className="flex relative justify-between space-x-3">
-                    <div className="bg-[#dee5f5] sm: md:h-56 lg:h-64 xl:h-72 min-w-min md:w-5/12 lg:w-6/12 xl:w-7/12 rounded-md relative flex justify-center items-center">
-                        <div className="absolute -top-72">
+                    <div className="bg-[#dee5f5] lg:h-64 lg:w-[660px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
+                        <div className="absolute lg:-top-72 2xl:-top-80">
                             <img src={furniture1}
-                            className="-rotate-6"
+                            className="lg:mt-16 lg:h-[420px] lg:w-[620px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 "
                             alt="prevImage"/>
                         </div>
                         <div className="absolute bottom-2">sds</div>
                     </div>
+
+                    {/* 2nd div for discount */}
+
                     <div className="bg-[#ffd873] min-w-min w-5/12 rounded-md relative flex justify-between items-center">
                         <div className="ml-12 space-y-20">
                             <div>
                                 <h1 className=" font-semibold font-sans text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
                             </div>
                             <div>
-                                <button className="bg-white rounded-full py-1 px-1 md:px-2 lg:px-2 xl:px-3">
+                                <button className="bg-white rounded-full py-1 px-1 md:px-2 lg:px-3 xl:px-4">
                                     Explore More
                                 </button>
                             </div>
@@ -51,6 +69,18 @@ function Home() {
                             alt="prevImage"/>
                         </div>
                     </div>
+                </div>
+
+                {/* middle option */}
+
+                <div className="flex justify-evenly items-center mb-10">
+                    {
+                        OptionImage.map((image, index) => (
+                            <div key={index} className={`flex justify-center lg:h-[120px] lg:w-[220px] 2xl:h-[120px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
+                                <img src={image.src} alt={createImageBitmap.src} className="w-[100px] aspect-square"/>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
