@@ -8,6 +8,7 @@ import wardrobe from '../../assets/Options/wardrobe.png'
 import armchair from '../../assets/Options/armchair.png'
 import chair2 from '../../assets/chair2.png'
 import table from '../../assets/table.png'
+import sofas from '../../assets/sofas.png'
 
 
 function Home() {
@@ -126,12 +127,39 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex mt-20">
-                    <div className="border">
-                        asds
+                <div className="flex space-x-20 mt-20 p-10">
+                    <div className="">
+                        <img src={sofas} className="w-[300px] aspect-square rounded-lg"/>
                     </div>
-                    <div>
-                        asdasda
+                    <div className="mt-5 space-y-10">
+                        <div>
+                            <h1 className="text-3xl font-sans font-bold">
+                                Get read for<br/> winter
+                            </h1>
+                        </div>
+                        <div>
+                            <span>
+                                Curl up with loved ones on our plush <strong>sofas</strong> and sink into
+                                the soft embrance of <strong>winter-ready</strong> fabrics.<br/>
+                                <strong>Enjoy</strong> the season&apos;s festivities surrounded by our <strong>stylish</strong> and<br/> inviting living room <strong>furniture</strong>
+                            </span>
+                        </div>
+                        <div>
+                            <button className="text-sm font-sans py-1 px-3 rounded-full bg-[#ffd873]">
+                                Open Store
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="ml-10 space-y-5">
+                        <div className="">
+                            <h1 className="text-3xl font-sans font-bold">Our Latest arrivals</h1>
+                        </div>
+                        <div className="text-gray-600">
+                            <p className="text-sm">Introducing Our Latest Arrivals -Elevate Your Space<br/>with Contemporary Elegances!</p>
+                        </div>
                     </div>
                 </div>
             </div>
