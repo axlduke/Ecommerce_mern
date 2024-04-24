@@ -6,6 +6,8 @@ import sofa from '../../assets/Options/sofa.png'
 import cabinet from '../../assets/Options/cabinet.png'
 import wardrobe from '../../assets/Options/wardrobe.png'
 import armchair from '../../assets/Options/armchair.png'
+import chair2 from '../../assets/chair2.png'
+import table from '../../assets/table.png'
 
 
 function Home() {
@@ -81,6 +83,56 @@ function Home() {
                             </div>
                         ))
                     }
+                </div>
+
+                <div className="flex justify-between">
+                    <div className="p-10 space-y-8">
+                        <h1 className=" 2xl:text-5xl font-extrabold font-sans">
+                            Daily Offer
+                        </h1>
+                        <p className=" text-sm font-sans w-96 text-justify">
+                            check out our daily offers that can combine big discount on some products. Offers may change every day,
+                            do not miss your chance :)
+                        </p>
+                        <button className=" font-sans py-2 px-4 rounded-full bg-[#ffd873]">
+                            Open Store
+                        </button>
+                    </div>
+                    <div className="absolute 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
+                        <div className="flex justify-between">
+                            <h1 className="text-2xl font-extrabold">
+                                Chair
+                            </h1>
+                            <span className="bg-white text-xs font-bold py-2 px-3 rounded-full ">
+                                30%<br/>OFF
+                            </span>
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <img src={chair2} className=" w-[300px]" />
+                        </div>
+                    </div>
+                    <div className="bg-[#feeed6] p-8 rounded-lg h-[360px] w-[450px]">
+                        <div className="flex justify-between">
+                            <h1 className="text-2xl font-extrabold">
+                                Tables
+                            </h1>
+                            <span className="bg-white text-xs font-bold py-2 px-3 rounded-full ">
+                                50%<br/>OFF
+                            </span>
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <img src={table} className=" w-[300px]" />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex mt-20">
+                    <div className="border">
+                        asds
+                    </div>
+                    <div>
+                        asdasda
+                    </div>
                 </div>
             </div>
         </div>
