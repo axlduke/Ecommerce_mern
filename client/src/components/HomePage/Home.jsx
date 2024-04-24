@@ -9,6 +9,15 @@ import armchair from '../../assets/Options/armchair.png'
 import chair2 from '../../assets/chair2.png'
 import table from '../../assets/table.png'
 import sofas from '../../assets/sofas.png'
+import sofa3 from '../../assets/sofa3.png'
+import chair3 from '../../assets/chair3.png'
+import LeatherChair from '../../assets/LeatherChair.png'
+import woodenarmchair from '../../assets/woodenarmchair.png'
+import yellowsofa from '../../assets/yellowsofa.png'
+import wardrobe2 from '../../assets/wardrobe2.png'
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { useState } from "react"
+import { CiShoppingCart } from "react-icons/ci";
 
 
 function Home() {
@@ -20,6 +29,11 @@ function Home() {
         { name: 'wardrobe', src: wardrobe},
         { name: 'armchair', src: armchair},
     ]
+
+    const [isClicked, setIsClicked] = useState(false)
+    const handleClickHeart = () => {
+        setIsClicked(prevState => !prevState)
+    }
 
     return (
         <div>
@@ -159,6 +173,63 @@ function Home() {
                         </div>
                         <div className="text-gray-600">
                             <p className="text-sm">Introducing Our Latest Arrivals -Elevate Your Space<br/>with Contemporary Elegances!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-3">
+                    <div className="bg-[#feeed6] w-[700px] h-72 rounded-xl relative">
+                        <div className="m-5">
+                            <div onClick={handleClickHeart} className="text-lg">
+                                { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                            </div>
+                            <div className="flex justify-center items-center mt-5">
+                                <img src={sofa3} alt="" className="w-96 h-46" />
+                            </div>
+                            <div className="">
+                                <p className="absolute text-xs bottom-2">Beige Sofa #345<br/>$ 1570</p>
+                            </div>
+                            <div className="absolute bottom-4 right-3">
+                                <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                        <div className="m-5">
+                            <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
+                                { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                            </div>
+                            <img src={chair3} alt="" className="w-52 h-52" />
+                            <div className="">
+                                <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                            </div>
+                            <div className="absolute bottom-4 right-3">
+                                <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                        <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
+                            { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                        </div>
+                        <img src={LeatherChair} alt="" className="w-52 h-52" />
+                        <div className="">
+                            <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                        </div>
+                        <div className="absolute bottom-4 right-3">
+                            <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                        </div>
+                    </div>
+                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                        <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
+                            { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                        </div>
+                        <img src={LeatherChair} alt="" className="w-52 h-52" />
+                        <div className="">
+                            <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                        </div>
+                        <div className="absolute bottom-4 right-3">
+                            <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
                         </div>
                     </div>
                 </div>
