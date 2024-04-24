@@ -201,7 +201,7 @@ function Home() {
                             </div>
                             <img src={chair3} alt="" className="w-52 h-52" />
                             <div className="">
-                                <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 left-3">Gray armchair #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -214,19 +214,52 @@ function Home() {
                         </div>
                         <img src={LeatherChair} alt="" className="w-52 h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3">Leather chair #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-3">
+                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                        <div className="m-5">
+                            <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
+                                { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                            </div>
+                            <img src={woodenarmchair} alt="" className="w-52 h-52" />
+                            <div className="">
+                                <p className="absolute text-xs bottom-2 left-3">Wooden armchair #345<br/>$ 1570</p>
+                            </div>
+                            <div className="absolute bottom-4 right-3">
+                                <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-[#feeed6] w-[700px] h-72 rounded-xl relative">
+                        <div className="m-5">
+                            <div onClick={handleClickHeart} className="text-lg">
+                                { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
+                            </div>
+                            <div className="flex justify-center items-center mt-10">
+                                <img src={yellowsofa} alt="" className="w-96 h-46" />
+                            </div>
+                            <div className="">
+                                <p className="absolute text-xs bottom-2">Yellow Sofa #345<br/>$ 1570</p>
+                            </div>
+                            <div className="absolute bottom-4 right-3">
+                                <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
+                            </div>
                         </div>
                     </div>
                     <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
                         <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                             { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                         </div>
-                        <img src={LeatherChair} alt="" className="w-52 h-52" />
+                        <img src={wardrobe2} alt="" className="w-52 h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3">Beige Sofa #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3">Wardrobe #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
