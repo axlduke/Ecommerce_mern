@@ -266,6 +266,23 @@ function Home() {
                         </div>
                     </div>
                 </div>
+
+                <div className="flex flex-col items-center space-y-12">
+                    <button className=" font-sans py-2 px-4 rounded-full bg-[#ffd873]">
+                        Open Store
+                    </button>
+                    <div className="">
+                        <h1 className="font-sans text-3xl font-semibold">
+                            Subscribe to our newsletter and<br/> grab <strong className="font-extrabold">30% OFF!</strong>
+                        </h1>
+                    </div>
+                    <div className="flex space-x-3">
+                        <input type="email" className="w-96 border-2 border-[#e0e6f4] rounded-full py-2 pl-5" placeholder="Your Email..."/>
+                        <button className=" font-sans py-2 px-4 rounded-full bg-black text-white">
+                            Open Store
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )
