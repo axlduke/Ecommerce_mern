@@ -15,9 +15,11 @@ import LeatherChair from '../../assets/LeatherChair.png'
 import woodenarmchair from '../../assets/woodenarmchair.png'
 import yellowsofa from '../../assets/yellowsofa.png'
 import wardrobe2 from '../../assets/wardrobe2.png'
+import wintersofa from '../../assets/wintersofa.png'
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useState } from "react"
 import { CiShoppingCart } from "react-icons/ci";
+import Footer from "./Footer"
 
 
 function Home() {
@@ -283,6 +285,24 @@ function Home() {
                         </button>
                     </div>
                 </div>
+                {/* special Offer */}
+                <div className="flex justify-between px-10 rounded-xl items-center relative bg-[#ffd873] h-80">
+                    <div className="flex flex-col  space-y-6">
+                        <h1 className="text-4xl font-sans font-extrabold">
+                            Winter offer
+                        </h1>
+                        <span className="text-3xl font-sans">
+                            10 hours : 20 min : 40 sec
+                        </span>
+                        <button className=" text-sm w-28 font-sans py-2 px-4 rounded-full bg-white">
+                            Open Item
+                        </button>
+                    </div>
+                    <div className="pt-20">
+                        <img src={wintersofa} alt="" className="w-[800px] h-64" />
+                    </div>
+                </div>
+                <Footer/>
             </div>
         </div>
     )
