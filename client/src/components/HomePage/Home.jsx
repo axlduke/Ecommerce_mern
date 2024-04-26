@@ -60,10 +60,10 @@ function Home() {
                 </div>
 
                 <div className="flex relative justify-between space-x-3">
-                    <div className="bg-[#dee5f5] lg:h-64 lg:w-[660px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
+                    <div className="bg-[#dee5f5] lg:h-64 lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
                         <div className="absolute lg:-top-72 2xl:-top-80">
                             <img src={furniture1}
-                            className="lg:mt-16 lg:h-[420px] lg:w-[620px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 "
+                            className="lg:mt-16 lg:h-[420px] lg:w-[620px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 border border-black"
                             alt="prevImage"/>
                         </div>
                         <div className="absolute bottom-2">sds</div>
@@ -107,7 +107,7 @@ function Home() {
                         <h1 className=" 2xl:text-5xl font-extrabold font-sans">
                             Daily Offer
                         </h1>
-                        <p className=" text-sm font-sans w-96 text-justify">
+                        <p className=" text-sm font-sans lg:w-64 2xl:w-96 text-justify">
                             check out our daily offers that can combine big discount on some products. Offers may change every day,
                             do not miss your chance :)
                         </p>
@@ -115,7 +115,7 @@ function Home() {
                             Open Store
                         </button>
                     </div>
-                    <div className="absolute 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
+                    <div className="absolute lg:left-[360px] 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-extrabold">
                                 Chair
@@ -291,7 +291,7 @@ function Home() {
                         <h1 className="text-4xl font-sans font-extrabold">
                             Winter offer
                         </h1>
-                        <span className="text-3xl font-sans">
+                        <span className="lg:text-xl 2xl:text-3xl font-sans">
                             10 hours : 20 min : 40 sec
                         </span>
                         <button className=" text-sm w-28 font-sans py-2 px-4 rounded-full bg-white">
@@ -299,7 +299,7 @@ function Home() {
                         </button>
                     </div>
                     <div className="pt-20">
-                        <img src={wintersofa} alt="" className="w-[800px] h-64" />
+                        <img src={wintersofa} alt="" className="lg:w-[600px] 2xl:w-[800px] h-64" />
                     </div>
                 </div>
                 <Footer/>

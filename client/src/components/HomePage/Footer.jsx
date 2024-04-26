@@ -59,7 +59,7 @@ function Footer() {
                 </div>
             </div>
             <div className="absolute mt-10">
-                <div className="flex justify-center bg-[#e0e5f2] rounded-tl-xl rounded-tr-xl h-52 w-[1350px]">
+                <div className="flex justify-center bg-[#e0e5f2] rounded-tl-xl rounded-tr-xl lg:h-10 2xl:h-52 lg:w-[1140px] xl:w-[1200px] xxl:w-[1200px] 2xl:w-[1350px]">
                     <h1 className="text-sm">
                         Copyright © SOFI. All Rights Reserved. -DEV _ACE_M.
                     </h1>
