@@ -42,14 +42,14 @@ function Home() {
             <Nav />
             <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-3 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
 
-                <div className="min-w-min lg:h-80 bg-[rgb(88,115,190)] rounded-md">
+                <div className="min-w-min md:h-64 lg:h-80 bg-[rgb(88,115,190)] rounded-md">
                     <div className="flex justify-center">
-                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-6xl lg:text-7xl xxl:text-7xl 2xl:text-8xl">
+                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-5xl lg:text-7xl xxl:text-7xl 2xl:text-8xl">
                             Modern Minimalist Furniture
                         </h1>
                     </div>
-                    <div className="absolute mt-6 lg:right-6 xl:right-24 xxl:right-5">
-                        <p className="text-white xs: md:w-[100px] lg:w-[450px] xl:w-[550px] xxl:w-[530px] 2xl:w-[630px] text-justify">
+                    <div className="lg:absolute xl:absolute xxl:absolute 2xl:absolute mt-6 md:space-y-5 md:flex md:flex-col md:justify-center md:items-center lg:right-6 xl:right-24 xxl:right-5">
+                        <p className="text-white xs: md:w-[400px] lg:w-[450px] xl:w-[550px] xxl:w-[530px] 2xl:w-[630px] text-justify">
                             Discover a curated collection of handcrafted pieces designed to transform your
                             living spaces into expressions of your unique taste and lifestyle.
                         </p>
@@ -59,20 +59,20 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex relative justify-between space-x-3">
-                    <div className="bg-[#dee5f5] lg:h-64 lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
+                <div className="flex relative justify-between space-x-3 md:h-72 lg:h-64">
+                    <div className="bg-[#dee5f5] md:w-[410px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
                         <div className="absolute lg:-top-72 2xl:-top-80">
                             <img src={furniture1}
-                            className="lg:mt-16 lg:h-[420px] lg:w-[620px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 border border-black"
+                            className="md:-mt-20 lg:mt-16 lg:h-[420px] md:w-[400px] lg:w-[600px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 border border-black"
                             alt="prevImage"/>
                         </div>
-                        <div className="absolute bottom-2">sds</div>
+                        <div className="absolute bottom-2">selector</div>
                     </div>
 
                     {/* 2nd div for discount */}
 
                     <div className="bg-[#ffd873] min-w-min w-5/12 rounded-md relative flex justify-between items-center">
-                        <div className="ml-12 space-y-20">
+                        <div className=" md:ml-5 2xl:ml-12 md:space-y-36 2xl:space-y-20">
                             <div>
                                 <h1 className=" font-semibold font-sans text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
                             </div>
@@ -82,9 +82,9 @@ function Home() {
                                 </button>
                             </div>
                         </div>
-                        <div className="absolute right-1">
+                        <div className="absolute md:right-0 2xl:right-1">
                             <img src={furniture2}
-                            className=" w-80"
+                            className="md:w-96 2xl:w-80"
                             alt="prevImage"/>
                         </div>
                     </div>
@@ -95,14 +95,14 @@ function Home() {
                 <div className="flex justify-evenly items-center mb-10">
                     {
                         OptionImage.map((image, index) => (
-                            <div key={index} className={`flex justify-center lg:h-[120px] lg:w-[220px] 2xl:h-[120px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
-                                <img src={image.src} alt={createImageBitmap.src} className="w-[100px] aspect-square"/>
+                            <div key={index} className={`flex justify-center items-center md:h-[160px] lg:h-[120px] md:w-[130px] lg:w-[220px] 2xl:h-[120px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
+                                <img src={image.src} alt={createImageBitmap.src} className="md:w-[120px] 2xl:w-[100px] md:h-32"/>
                             </div>
                         ))
                     }
                 </div>
 
-                <div className="flex justify-between">
+                <div className="2xl:flex 2xl:justify-between">
                     <div className="p-10 space-y-8">
                         <h1 className=" 2xl:text-5xl font-extrabold font-sans">
                             Daily Offer
@@ -115,7 +115,7 @@ function Home() {
                             Open Store
                         </button>
                     </div>
-                    <div className="absolute lg:left-[360px] 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
+                    <div className="2xl:absolute lg:left-[390px] 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-extrabold">
                                 Chair
@@ -128,7 +128,7 @@ function Home() {
                             <img src={chair2} className=" w-[300px]" />
                         </div>
                     </div>
-                    <div className="bg-[#feeed6] p-8 rounded-lg h-[360px] w-[450px]">
+                    <div className="bg-[#feeed6] p-8 rounded-lg h-[360px] lg:w-[400px] 2xl:w-[450px]">
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-extrabold">
                                 Tables
@@ -138,7 +138,7 @@ function Home() {
                             </span>
                         </div>
                         <div className="flex justify-center items-center">
-                            <img src={table} className=" w-[300px]" />
+                            <img src={table} className="2xl:w-[300px]" />
                         </div>
                     </div>
                 </div>
