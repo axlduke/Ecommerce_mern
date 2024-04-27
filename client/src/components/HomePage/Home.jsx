@@ -44,7 +44,7 @@ function Home() {
 
                 <div className="min-w-min md:h-64 lg:h-80 bg-[rgb(88,115,190)] rounded-md">
                     <div className="flex justify-center">
-                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-5xl lg:text-7xl xxl:text-7xl 2xl:text-8xl">
+                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-5xl lg:text-6xl xxl:text-7xl 2xl:text-8xl">
                             Modern Minimalist Furniture
                         </h1>
                     </div>
@@ -61,9 +61,9 @@ function Home() {
 
                 <div className="flex relative justify-between space-x-3 md:h-72 lg:h-64">
                     <div className="bg-[#dee5f5] md:w-[440px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
-                        <div className="absolute lg:-top-72 2xl:-top-80">
+                        <div className="absolute lg:-top-72 2xl:-top-72">
                             <img src={furniture1}
-                            className="md:-mt-20 lg:mt-16 lg:h-[420px] md:w-[400px] lg:w-[600px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 border border-black"
+                            className="md:-mt-20 lg:mt-24 lg:h-[400px] md:w-[400px] lg:w-[500px] xl:w-[500px] xxl:w-[600px] 2xl:w-[670px] 2xl:h-[400px] -rotate-6 border border-black"
                             alt="prevImage"/>
                         </div>
                         <div className="absolute bottom-2">selector</div>
@@ -72,9 +72,9 @@ function Home() {
                     {/* 2nd div for discount */}
 
                     <div className="bg-[#ffd873] min-w-min w-5/12 rounded-md relative flex justify-between items-center">
-                        <div className=" md:ml-5 2xl:ml-12 md:space-y-36 2xl:space-y-20">
+                        <div className=" md:ml-5 2xl:ml-12 md:space-y-36 lg:space-y-32 2xl:space-y-20">
                             <div>
-                                <h1 className=" font-semibold font-sans text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
+                                <h1 className=" font-semibold font-sans text-2xl md:text-3xl lg:text-3xl xl:text-5xl xxl:text-4xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
                             </div>
                             <div>
                                 <button className="bg-white rounded-full py-1 px-1 md:px-2 lg:px-3 xl:px-4">
@@ -95,19 +95,19 @@ function Home() {
                 <div className="flex justify-evenly items-center mb-10">
                     {
                         OptionImage.map((image, index) => (
-                            <div key={index} className={`flex justify-center items-center md:h-[160px] lg:h-[120px] md:w-[130px] lg:w-[220px] 2xl:h-[120px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
-                                <img src={image.src} alt={createImageBitmap.src} className="md:w-[120px] 2xl:w-[100px] md:h-32"/>
+                            <div key={index} className={`flex justify-center items-center md:h-[160px] lg:h-[120px] md:w-[130px] lg:w-[180px] 2xl:h-[120px] xxl:w-[250px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
+                                <img src={image.src} alt={createImageBitmap.src} className="md:w-[120px] lg:w-[100px] 2xl:w-[100px] md:h-32 lg:h-28"/>
                             </div>
                         ))
                     }
                 </div>
 
-                <div className="md:space-y-5 2xl:flex 2xl:justify-between">
+                <div className="md:space-y-5 lg:flex lg:justify-between 2xl:flex 2xl:justify-between">
                     <div className="p-10 space-y-8">
-                        <h1 className=" 2xl:text-5xl font-extrabold font-sans">
+                        <h1 className="xxl:text-4xl 2xl:text-5xl font-extrabold font-sans">
                             Daily Offer
                         </h1>
-                        <p className=" text-sm font-sans lg:w-64 2xl:w-96 text-justify">
+                        <p className=" text-sm xxl:text-xl font-sans lg:w-64 xxl:w-[550px] 2xl:w-96 text-justify">
                             check out our daily offers that can combine big discount on some products. Offers may change every day,
                             do not miss your chance :)
                         </p>
@@ -115,7 +115,7 @@ function Home() {
                             Open Store
                         </button>
                     </div>
-                    <div className="2xl:absolute lg:left-[390px] 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
+                    <div className="lg:absolute 2xl:absolute lg:left-[320px] xxl:left-[650px] 2xl:left-[680px] bg-[#e0e6f4] p-8 rounded-md h-80 w-80">
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-extrabold">
                                 Chair
@@ -125,10 +125,10 @@ function Home() {
                             </span>
                         </div>
                         <div className="flex justify-center items-center">
-                            <img src={chair2} className=" w-[300px]" />
+                            <img src={chair2} className="2xl:w-[300px]" />
                         </div>
                     </div>
-                    <div className="bg-[#feeed6] p-8 rounded-lg h-[360px] lg:w-[400px] 2xl:w-[450px]">
+                    <div className="bg-[#feeed6] p-8 rounded-lg h-[360px] lg:w-[320px] 2xl:w-[450px]">
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-extrabold">
                                 Tables
@@ -145,16 +145,16 @@ function Home() {
 
                 <div className="flex space-x-20 mt-20 p-10">
                     <div className="">
-                        <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify 2xl:w-[300px] aspect-square rounded-lg"/>
+                        <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify xxl:w-[650px] 2xl:w-[300px] aspect-square rounded-lg"/>
                     </div>
                     <div className="mt-5 space-y-10">
                         <div>
-                            <h1 className="text-3xl font-sans font-bold">
+                            <h1 className="md:text-2xl lg:text-3xl xl:text-4xl xxl:text-5xl 2xl:text-6xl font-sans font-bold">
                                 Get read for<br/> winter
                             </h1>
                         </div>
                         <div>
-                            <span>
+                            <span className=" md:text-base lg:text-lg xl:text-xl xxl:text-2xl 2xl:text-3xl">
                                 Curl up with loved ones on our plush <strong>sofas</strong> and sink into
                                 the soft embrance of <strong>winter-ready</strong> fabrics.<br/>
                                 <strong>Enjoy</strong> the season&apos;s festivities surrounded by our <strong>stylish</strong> and<br/> inviting living room <strong>furniture</strong>
@@ -171,10 +171,10 @@ function Home() {
                 <div className="">
                     <div className="ml-10 space-y-5">
                         <div className="">
-                            <h1 className="text-3xl font-sans font-bold">Our Latest arrivals</h1>
+                            <h1 className="xxl:text-5xl 2xl:text-6xl font-sans font-bold">Our Latest arrivals</h1>
                         </div>
                         <div className="text-gray-600">
-                            <p className="text-sm">Introducing Our Latest Arrivals -Elevate Your Space<br/>with Contemporary Elegances!</p>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-lg xxl:text-xl 2xl:text-2xl">Introducing Our Latest Arrivals -Elevate Your Space<br/>with Contemporary Elegances!</p>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ function Home() {
                                 <img src={sofa3} alt="" className="w-96 h-46" />
                             </div>
                             <div className="">
-                                <p className="absolute text-xs bottom-2">Beige Sofa #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 xxl:w-96 xxl:truncate 2xl:truncate">Beige Sofa #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -201,9 +201,9 @@ function Home() {
                             <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                             </div>
-                            <img src={chair3} alt="" className="md:h-46 w-52 2xl:h-52" />
+                            <img src={chair3} alt="" className="md:h-46 w-52 xxl:h-44 2xl:h-52" />
                             <div className="">
-                                <p className="absolute text-xs bottom-2 left-3 md:w-28 md:truncate">Gray armchair #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 left-3 md:w-28 lg:w-36 xl:w-44 xxl:w-52 2xl:w-64 md:truncate lg:truncate xl:truncate xxl:truncate 2xl:truncate">Gray armchair #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -216,7 +216,7 @@ function Home() {
                         </div>
                         <img src={LeatherChair} alt="" className="md:h-44 w-52 2xl:h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3 md:w-32 md:truncate">Leather chair #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3 md:w-28 lg:w-36 xl:w-44 xxl:w-52 2xl:w-64 md:truncate lg:truncate xl:truncate xxl:truncate 2xl:truncate">Leather chair #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -232,7 +232,7 @@ function Home() {
                             </div>
                             <img src={woodenarmchair} alt="" className="w-52 md:h-44 2xl:h-52" />
                             <div className="">
-                                <p className="absolute text-xs bottom-2 left-3 md:w-28 md:truncate">Wooden armchair #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 left-3 md:w-28 lg:w-36 xl:w-44 xxl:w-52 2xl:w-64 md:truncate lg:truncate xl:truncate xxl:truncate 2xl:truncate">Wooden armchair #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -248,7 +248,7 @@ function Home() {
                                 <img src={yellowsofa} alt="" className="w-96 2xl:h-46" />
                             </div>
                             <div className="">
-                                <p className="absolute text-xs bottom-2">Yellow Sofa #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 md:w-28 lg:w-36 xl:w-44 xxl:w-52 2xl:w-64 md:truncate lg:truncate xl:truncate xxl:truncate 2xl:truncate">Yellow Sofa #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -261,7 +261,7 @@ function Home() {
                         </div>
                         <img src={wardrobe2} alt="" className="w-52 md:h-44 2xl:h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3 md:w-28 truncate">Wardrobe #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3 md:w-28 lg:w-36 xl:w-44 xxl:w-52 2xl:w-64 md:truncate lg:truncate xl:truncate xxl:truncate 2xl:truncate">Wardrobe #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
