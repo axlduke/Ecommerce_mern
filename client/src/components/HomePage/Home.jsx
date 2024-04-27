@@ -40,7 +40,7 @@ function Home() {
     return (
         <div>
             <Nav />
-            <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-3 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
+            <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-5 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
 
                 <div className="min-w-min md:h-64 lg:h-80 bg-[rgb(88,115,190)] rounded-md">
                     <div className="flex justify-center">
@@ -60,7 +60,7 @@ function Home() {
                 </div>
 
                 <div className="flex relative justify-between space-x-3 md:h-72 lg:h-64">
-                    <div className="bg-[#dee5f5] md:w-[410px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
+                    <div className="bg-[#dee5f5] md:w-[440px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
                         <div className="absolute lg:-top-72 2xl:-top-80">
                             <img src={furniture1}
                             className="md:-mt-20 lg:mt-16 lg:h-[420px] md:w-[400px] lg:w-[600px] xl:w-[500px] 2xl:w-[670px] 2xl:h-[450px] -rotate-6 border border-black"
@@ -102,7 +102,7 @@ function Home() {
                     }
                 </div>
 
-                <div className="2xl:flex 2xl:justify-between">
+                <div className="md:space-y-5 2xl:flex 2xl:justify-between">
                     <div className="p-10 space-y-8">
                         <h1 className=" 2xl:text-5xl font-extrabold font-sans">
                             Daily Offer
@@ -145,7 +145,7 @@ function Home() {
 
                 <div className="flex space-x-20 mt-20 p-10">
                     <div className="">
-                        <img src={sofas} className="w-[300px] aspect-square rounded-lg"/>
+                        <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify 2xl:w-[300px] aspect-square rounded-lg"/>
                     </div>
                     <div className="mt-5 space-y-10">
                         <div>
@@ -168,7 +168,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div>
+                <div className="">
                     <div className="ml-10 space-y-5">
                         <div className="">
                             <h1 className="text-3xl font-sans font-bold">Our Latest arrivals</h1>
@@ -201,9 +201,9 @@ function Home() {
                             <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                             </div>
-                            <img src={chair3} alt="" className="w-52 h-52" />
+                            <img src={chair3} alt="" className="md:h-46 w-52 2xl:h-52" />
                             <div className="">
-                                <p className="absolute text-xs bottom-2 left-3">Gray armchair #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 left-3 md:w-28 md:truncate">Gray armchair #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -214,9 +214,9 @@ function Home() {
                         <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                             { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                         </div>
-                        <img src={LeatherChair} alt="" className="w-52 h-52" />
+                        <img src={LeatherChair} alt="" className="md:h-44 w-52 2xl:h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3">Leather chair #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3 md:w-32 md:truncate">Leather chair #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -230,9 +230,9 @@ function Home() {
                             <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                             </div>
-                            <img src={woodenarmchair} alt="" className="w-52 h-52" />
+                            <img src={woodenarmchair} alt="" className="w-52 md:h-44 2xl:h-52" />
                             <div className="">
-                                <p className="absolute text-xs bottom-2 left-3">Wooden armchair #345<br/>$ 1570</p>
+                                <p className="absolute text-xs bottom-2 left-3 md:w-28 md:truncate">Wooden armchair #345<br/>$ 1570</p>
                             </div>
                             <div className="absolute bottom-4 right-3">
                                 <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -245,7 +245,7 @@ function Home() {
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                             </div>
                             <div className="flex justify-center items-center mt-10">
-                                <img src={yellowsofa} alt="" className="w-96 h-46" />
+                                <img src={yellowsofa} alt="" className="w-96 2xl:h-46" />
                             </div>
                             <div className="">
                                 <p className="absolute text-xs bottom-2">Yellow Sofa #345<br/>$ 1570</p>
@@ -259,9 +259,9 @@ function Home() {
                         <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                             { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                         </div>
-                        <img src={wardrobe2} alt="" className="w-52 h-52" />
+                        <img src={wardrobe2} alt="" className="w-52 md:h-44 2xl:h-52" />
                         <div className="">
-                            <p className="absolute text-xs bottom-2 left-3">Wardrobe #345<br/>$ 1570</p>
+                            <p className="absolute text-xs bottom-2 left-3 md:w-28 truncate">Wardrobe #345<br/>$ 1570</p>
                         </div>
                         <div className="absolute bottom-4 right-3">
                             <button className="text-xl text-white p-2 rounded-full bg-[rgb(88,115,190)]"><CiShoppingCart/></button>
@@ -291,7 +291,7 @@ function Home() {
                         <h1 className="text-4xl font-sans font-extrabold">
                             Winter offer
                         </h1>
-                        <span className="lg:text-xl 2xl:text-3xl font-sans">
+                        <span className="md:text-lg lg:text-xl 2xl:text-3xl font-sans">
                             10 hours : 20 min : 40 sec
                         </span>
                         <button className=" text-sm w-28 font-sans py-2 px-4 rounded-full bg-white">
@@ -299,7 +299,7 @@ function Home() {
                         </button>
                     </div>
                     <div className="pt-20">
-                        <img src={wintersofa} alt="" className="lg:w-[600px] 2xl:w-[800px] h-64" />
+                        <img src={wintersofa} alt="" className="md:w-[400px] lg:w-[600px] 2xl:w-[800px] h-64" />
                     </div>
                 </div>
                 <Footer/>
