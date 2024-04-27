@@ -40,30 +40,34 @@ function Home() {
     return (
         <div>
             <Nav />
-            <div className="relative mx-5 mt-16 sm:space-y-3 md:space-y-5 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
+            <div className="relative mx-5 mt-16 sm:space-y-3 xs:space-y-4 md:space-y-5 lg:space-y-4 xl:space-y-5 2xl:space-y-7">
 
-                <div className="min-w-min md:h-64 lg:h-80 bg-[rgb(88,115,190)] rounded-md">
+                <div className="min-w-min xs:h-56 md:h-64 lg:h-80 bg-[rgb(88,115,190)] rounded-md">
                     <div className="flex justify-center">
-                        <h1 className="text-white font-sans font-bold mt-8 text-2xl md:text-5xl lg:text-6xl xxl:text-7xl 2xl:text-8xl">
+                        <h1 className="text-white font-sans font-bold mt-8 xs:text-2xl sm:text-2xl md:text-5xl lg:text-6xl xxl:text-7xl 2xl:text-8xl">
                             Modern Minimalist Furniture
                         </h1>
                     </div>
-                    <div className="lg:absolute xl:absolute xxl:absolute 2xl:absolute mt-6 md:space-y-5 md:flex md:flex-col md:justify-center md:items-center lg:right-6 xl:right-24 xxl:right-5">
-                        <p className="text-white xs: md:w-[400px] lg:w-[450px] xl:w-[550px] xxl:w-[530px] 2xl:w-[630px] text-justify">
-                            Discover a curated collection of handcrafted pieces designed to transform your
-                            living spaces into expressions of your unique taste and lifestyle.
-                        </p>
-                        <button className="lg:mt-6 xl:mt-7 text-[#0d0a0a] bg-[#ffd873] px-6 py-2 rounded-full">
-                            Explore More
-                        </button>
+                    <div className=" lg:absolute xl:absolute xxl:absolute 2xl:absolute mt-6 xs:space-y-5 md:space-y-5 md:flex md:flex-col md:justify-center md:items-center lg:right-6 xl:right-24 xxl:right-5">
+                        <div className="xs:flex xs:justify-center">
+                            <p className="text-white xs:text-sm xs:w-[350px] sm:w-[380px] md:w-[400px] lg:w-[450px] xl:w-[550px] xxl:w-[530px] 2xl:w-[630px] text-justify">
+                                Discover a curated collection of handcrafted pieces designed to transform your
+                                living spaces into expressions of your unique taste and lifestyle.
+                            </p>
+                        </div>
+                        <div className="xs:flex xs:justify-center">
+                            <button className="xs:text-xs lg:mt-6 xl:mt-7 text-[#0d0a0a] bg-[#ffd873] px-6 py-2 rounded-full">
+                                Explore More
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div className="flex relative justify-between space-x-3 md:h-72 lg:h-64">
-                    <div className="bg-[#dee5f5] md:w-[440px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
+                <div className="flex relative justify-between space-x-3 xs:h-44 md:h-72 lg:h-64">
+                    <div className="bg-[#dee5f5] xs:w-[240px] sm:w-[350px] md:w-[440px] lg:w-[680px] xl:w-[750px] 2xl:w-[850px] rounded-md relative flex justify-center items-center">
                         <div className="absolute lg:-top-72 2xl:-top-72">
                             <img src={furniture1}
-                            className="md:-mt-20 lg:mt-24 lg:h-[400px] md:w-[400px] lg:w-[500px] xl:w-[500px] xxl:w-[600px] 2xl:w-[670px] 2xl:h-[400px] -rotate-6 border border-black"
+                            className="xs:-mt-20 md:-mt-20 lg:mt-24 xs:h-[110px] lg:h-[400px] xs:w-[180px] md:w-[400px] lg:w-[500px] xl:w-[500px] xxl:w-[600px] 2xl:w-[670px] 2xl:h-[400px] -rotate-6 border border-black"
                             alt="prevImage"/>
                         </div>
                         <div className="absolute bottom-2">selector</div>
@@ -72,19 +76,19 @@ function Home() {
                     {/* 2nd div for discount */}
 
                     <div className="bg-[#ffd873] min-w-min w-5/12 rounded-md relative flex justify-between items-center">
-                        <div className=" md:ml-5 2xl:ml-12 md:space-y-36 lg:space-y-32 2xl:space-y-20">
+                        <div className="xs:ml-3 md:ml-5 2xl:ml-12 xs:space-y-20 md:space-y-36 lg:space-y-32 2xl:space-y-20">
                             <div>
-                                <h1 className=" font-semibold font-sans text-2xl md:text-3xl lg:text-3xl xl:text-5xl xxl:text-4xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
+                                <h1 className=" font-semibold font-sans xs:text-sm sm:text-xl md:text-3xl lg:text-3xl xl:text-5xl xxl:text-4xl text-[#836a22]">Wooden Chair<br/>50% OFF</h1>
                             </div>
                             <div>
-                                <button className="bg-white rounded-full py-1 px-1 md:px-2 lg:px-3 xl:px-4">
+                                <button className="bg-white xs:text-xs rounded-full xs:p-2 md:px-2 lg:px-3 xl:px-4">
                                     Explore More
                                 </button>
                             </div>
                         </div>
                         <div className="absolute md:right-0 2xl:right-1">
                             <img src={furniture2}
-                            className="md:w-96 2xl:w-80"
+                            className="xs:w-72 md:w-96 2xl:w-80"
                             alt="prevImage"/>
                         </div>
                     </div>
@@ -95,23 +99,23 @@ function Home() {
                 <div className="flex justify-evenly items-center mb-10">
                     {
                         OptionImage.map((image, index) => (
-                            <div key={index} className={`flex justify-center items-center md:h-[160px] lg:h-[120px] md:w-[130px] lg:w-[180px] 2xl:h-[120px] xxl:w-[250px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
-                                <img src={image.src} alt={createImageBitmap.src} className="md:w-[120px] lg:w-[100px] 2xl:w-[100px] md:h-32 lg:h-28"/>
+                            <div key={index} className={`flex justify-center items-center xs:h-[90px] md:h-[160px] lg:h-[120px] xs:w-[70px] md:w-[130px] lg:w-[180px] 2xl:h-[120px] xxl:w-[250px] 2xl:w-[280px] rounded-md p-1 ${index === 0 ? 'bg-[#ffd873]' : 'bg-[#e0e5f2]'}`}>
+                                <img src={image.src} alt={createImageBitmap.src} className="md:w-[120px] lg:w-[100px] 2xl:w-[100px] xs:h-14 md:h-32 lg:h-28"/>
                             </div>
                         ))
                     }
                 </div>
 
-                <div className="md:space-y-5 lg:flex lg:justify-between 2xl:flex 2xl:justify-between">
+                <div className="xs:space-y-4 md:space-y-5 lg:flex lg:justify-between 2xl:flex 2xl:justify-between">
                     <div className="p-10 space-y-8">
-                        <h1 className="xxl:text-4xl 2xl:text-5xl font-extrabold font-sans">
+                        <h1 className="xs:text-2xl md:text-xl lg:text-2xl xl:text-3xl xxl:text-4xl 2xl:text-5xl font-extrabold font-sans">
                             Daily Offer
                         </h1>
                         <p className=" text-sm xxl:text-xl font-sans lg:w-64 xxl:w-[550px] 2xl:w-96 text-justify">
                             check out our daily offers that can combine big discount on some products. Offers may change every day,
                             do not miss your chance :)
                         </p>
-                        <button className=" font-sans py-2 px-4 rounded-full bg-[#ffd873]">
+                        <button className="xs:text-xs font-sans py-2 px-4 rounded-full bg-[#ffd873]">
                             Open Store
                         </button>
                     </div>
@@ -143,7 +147,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex space-x-20 mt-20 p-10">
+                <div className="md:flex lg:flex xl:flex xxlflex 2xl:flex md:space-x-20 lg:space-x-20 xl:space-x-20 xxl:space-x-20 2xl:space-x-20 mt-20 p-10">
                     <div className="">
                         <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify xxl:w-[650px] 2xl:w-[300px] aspect-square rounded-lg"/>
                     </div>
@@ -169,9 +173,9 @@ function Home() {
                 </div>
 
                 <div className="">
-                    <div className="ml-10 space-y-5">
+                    <div className="ml-10 xs:space-y-4 md:space-y-5 lg:space-y-5 xl:space-y-5 xxl:space-y-5 2xl:space-y-5">
                         <div className="">
-                            <h1 className="xxl:text-5xl 2xl:text-6xl font-sans font-bold">Our Latest arrivals</h1>
+                            <h1 className="xs:text-xl md:text-2xl lg:text-3xl xl:text-4xl xxl:text-5xl 2xl:text-6xl font-sans font-bold">Our Latest arrivals</h1>
                         </div>
                         <div className="text-gray-600">
                             <p className="text-sm md:text-base lg:text-lg xl:text-lg xxl:text-xl 2xl:text-2xl">Introducing Our Latest Arrivals -Elevate Your Space<br/>with Contemporary Elegances!</p>
@@ -179,7 +183,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-3">
+                <div className="flex xs:flex xs:grid-cols-2 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3">
                     <div className="bg-[#feeed6] w-[700px] h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="text-lg">
