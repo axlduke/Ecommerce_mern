@@ -183,8 +183,8 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex xs:flex xs:grid-cols-2 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3">
-                    <div className="bg-[#feeed6] w-[700px] h-72 rounded-xl relative">
+                <div className="flex xs:grid xs:grid-cols-1 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3">
+                    <div className="bg-[#feeed6] xs:w-96 sm:w-96 w-[700px] h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
@@ -228,8 +228,8 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-3">
-                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                <div className="flex xs:grid xs:grid-cols-1 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3 gap-3">
+                    <div className="bg-[#e0e5f2] flex justify-center items-center sm:w-96 w-96 h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
@@ -243,7 +243,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#feeed6] w-[700px] h-72 rounded-xl relative">
+                    <div className="bg-[#feeed6] xs:w-96 sm:w-80 w-[700px] h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="text-lg">
                                 { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
@@ -259,7 +259,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#e0e5f2] flex justify-center items-center w-96 h-72 rounded-xl relative">
+                    <div className="bg-[#e0e5f2] flex justify-center items-center sm:w-80 w-96 h-72 rounded-xl relative">
                         <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
                             { isClicked ? <FaHeart className="text-red-500" /> : <FaRegHeart /> }
                         </div>
@@ -282,7 +282,7 @@ function Home() {
                             Subscribe to our newsletter and<br/> grab <strong className="font-extrabold">30% OFF!</strong>
                         </h1>
                     </div>
-                    <div className="flex space-x-3">
+                    <div className="md:flex lg:flex xl:flex xxl:flex 2xl:flex space-x-3">
                         <input type="email" className="w-96 border-2 border-[#e0e6f4] rounded-full py-2 pl-5" placeholder="Your Email..."/>
                         <button className=" font-sans py-2 px-4 rounded-full bg-black text-white">
                             Open Store
@@ -290,12 +290,12 @@ function Home() {
                     </div>
                 </div>
                 {/* special Offer */}
-                <div className="flex justify-between px-10 rounded-xl items-center relative bg-[#ffd873] h-80">
-                    <div className="flex flex-col  space-y-6">
-                        <h1 className="text-4xl font-sans font-extrabold">
+                <div className="flex justify-between xs:px-4 md:px-10 lg:px-10 xl:px-10 xxl:px-10 2xl:px-10 rounded-xl items-center relative bg-[#ffd873] xs:h-64 md:h-80 lg:h-80 xl:h-80 xxl:h-80 2xl:h-80">
+                    <div className="flex flex-col space-y-6">
+                        <h1 className="xs:text-2xl text-4xl font-sans font-extrabold">
                             Winter offer
                         </h1>
-                        <span className="md:text-lg lg:text-xl 2xl:text-3xl font-sans">
+                        <span className="xs:text-sm md:text-lg lg:text-xl 2xl:text-3xl font-sans">
                             10 hours : 20 min : 40 sec
                         </span>
                         <button className=" text-sm w-28 font-sans py-2 px-4 rounded-full bg-white">
@@ -303,7 +303,7 @@ function Home() {
                         </button>
                     </div>
                     <div className="pt-20">
-                        <img src={wintersofa} alt="" className="md:w-[400px] lg:w-[600px] 2xl:w-[800px] h-64" />
+                        <img src={wintersofa} alt="" className="xs:w-[200px] md:w-[400px] lg:w-[600px] 2xl:w-[800px] xs:h-44 md:h-64 lg:h-64 xl:h-64 xxl:h-64 2xl:h-64" />
                     </div>
                 </div>
                 <Footer/>

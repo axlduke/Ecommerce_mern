@@ -2,7 +2,7 @@
 function Footer() {
     return (
         <div className='2xl:mx-16 pt-16'>
-            <div className='grid md:grid-cols-4 lg:grid-cols-4 2xl:grid-cols-4 md:gap-3 2xl:gap-2'>
+            <div className='grid xs:grid-cols-2 xs:gap-2 sm:grid-cols-3 sm:gap-2 md:grid-cols-4 lg:grid-cols-4 2xl:grid-cols-4 md:gap-3 2xl:gap-2'>
                 <div className='flex flex-col space-y-10'>
                     <div className='flex space-x-3'>
                         <p>LOGO</p>
@@ -59,8 +59,8 @@ function Footer() {
                 </div>
             </div>
             <div className="absolute mt-10">
-                <div className="flex justify-center align-middle bg-[#e0e5f2] rounded-tl-xl rounded-tr-xl md:h-12 lg:h-10 2xl:h-10 md:w-[780px] lg:w-[1140px] xl:w-[1200px] xxl:w-[1290px] 2xl:w-[1350px]">
-                    <h1 className="flex justify-center items-center text-sm">
+                <div className="flex justify-center align-middle bg-[#e0e5f2] rounded-tl-xl rounded-tr-xl xs:h-9 sm:h-10 md:h-12 lg:h-10 2xl:h-10 xs:w-[380px] md:w-[780px] lg:w-[1140px] xl:w-[1200px] xxl:w-[1290px] 2xl:w-[1350px]">
+                    <h1 className="flex justify-center items-center xs:text-xs text-sm">
                         Copyright © SOFI. All Rights Reserved. -DEV _ACE_M.
                     </h1>
                 </div>
