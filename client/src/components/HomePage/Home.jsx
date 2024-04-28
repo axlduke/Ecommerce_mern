@@ -149,7 +149,7 @@ function Home() {
 
                 <div className="md:flex lg:flex xl:flex xxlflex 2xl:flex md:space-x-20 lg:space-x-20 xl:space-x-20 xxl:space-x-20 2xl:space-x-20 mt-20 p-10">
                     <div className="">
-                        <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify xxl:w-[650px] 2xl:w-[300px] aspect-square rounded-lg"/>
+                        <img src={sofas} className="md:h-80 md:w-[800px] md:text-justify xxl:w-[650px] 2xl:w-[560px] aspect-square rounded-lg"/>
                     </div>
                     <div className="mt-5 space-y-10">
                         <div>
@@ -183,7 +183,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex xs:grid xs:grid-cols-1 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3">
+                <div className="flex xs:grid xs:grid-cols-1 md:flex lg:flex-row xl:justify-center xl:flex xxl:justify-center xxl:flex 2xl:flex 2xl:justify-center gap-3">
                     <div className="bg-[#feeed6] xs:w-96 sm:w-96 w-[700px] h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="text-lg">
@@ -228,7 +228,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex xs:grid xs:grid-cols-1 md:flex-row lg:flex-row xl:flex-row xxl:flex-row 2xl:flex-row gap-3 gap-3">
+                <div className="flex xs:grid xs:grid-cols-1 md:justify-center md:flex lg:justify-center lg:flex xl:justify-center xl:flex xxl:justify-center xxl:flex 2xl:flex 2xl:justify-center gap-3">
                     <div className="bg-[#e0e5f2] flex justify-center items-center sm:w-96 w-96 h-72 rounded-xl relative">
                         <div className="m-5">
                             <div onClick={handleClickHeart} className="absolute top-5 left-5 text-lg">
