@@ -12,6 +12,7 @@ import img7 from '../../assets/ProdImage/7.png'
 import img8 from '../../assets/ProdImage/8.png'
 import img9 from '../../assets/ProdImage/9.png'
 import img10 from '../../assets/ProdImage/10.png'
+import NikeLogo from '../../assets/StoreLogo/Nike.png'
 
 
 function ItemView() {
@@ -75,16 +76,16 @@ function ItemView() {
                         <ul className='space-y-2'>
                             {
                                 VisibleProdImage.map((image, index) => (
-                                <li key={index} className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-22 2xl:h-20 border rounded-lg'>
-                                    <img src={image.src} alt="" className='2xl:w-20 2xl:h-20'/>
+                                <li key={index} className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-22 2xl:h-20'>
+                                    <img src={image.src} alt="" className='2xl:w-20 2xl:h-20 border border-gray-300 rounded-lg'/>
                                 </li>
                                 ))
                             }
                         </ul>
                     </div>
 
-                    <div className='2xl:flex 2xl:justify-center 2xl:items-center border rounded-lg 2xl:w-[600px] 2xl:h-[430px]'>
-                        <img src={img1} alt="" className='2xl:w-[600px] 2xl:h-[430px]'/>
+                    <div className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-[600px] 2xl:h-[430px]'>
+                        <img src={img1} alt="" className='2xl:w-[600px] 2xl:h-[430px] border border-gray-300 rounded-lg'/>
                     </div>
                 </div>
 
@@ -125,7 +126,7 @@ function ItemView() {
                             <ol className='flex space-x-2'>
                                 {
                                     ListSize.map((size, index) => (
-                                        <li key={index} className='2xl:w-14 border flex justify-center rounded-lg'>
+                                        <li key={index} className='2xl:w-14 border border-gray-300 font-medium flex justify-center rounded-lg'>
                                             {size.name}
                                         </li>
                                     ))
@@ -153,7 +154,7 @@ function ItemView() {
                                 Add to Cart
                             </button>
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between font-medium'>
                             <button>Chat </button>
                             <button>| Wishlist |</button>
                             <button>Share</button>
@@ -161,8 +162,35 @@ function ItemView() {
                     </div>
                 </div>
             </div>
-            <div>
-                sdfsdfs
+            <div className='p-5 2xl:mx-32 border border-gray-300 rounded-xl 2xl:w-[700px] 2xl:-mt-12'>
+                <div className='flex justify-between'>
+                    <div className='flex items-center space-x-3'>
+                        <div>
+                            <img src={NikeLogo} alt="" className='w-10 h-10 rounded-full border border-gray-400'/>
+                        </div>
+                        <div>
+                            <h1 className='text-xl font-semibold'>Nike Mall</h1>
+                            <span className='text-green-500 text-sm'>Online</span>
+                        </div>
+                    </div>
+                    <div className='space-x-3'>
+                        <button className='2xl:font-medium 2xl:w-28 border border-gray-600 p-1 rounded-lg'>Follow</button>
+                        <button className='2xl:font-medium 2xl:w-28 border border-gray-600 p-1 rounded-lg'>Visit Store</button>
+                    </div>
+                </div>
+                <div>
+                    <ol className='flex justify-between'>
+                        <li className='text-gray-600'>
+                            Rating Store : <strong>96%</strong>
+                        </li>
+                        <li>
+                            Location Store : <strong>Manila Makati</strong>
+                        </li>
+                        <li>
+                            Chat Reply : <strong>98%</strong>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
     )
