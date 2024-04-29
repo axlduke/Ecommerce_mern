@@ -69,27 +69,27 @@ function ItemView() {
             </div>
 
             {/* fetching Image for Product */}
-            <div className='flex 2xl:justify-between 2xl:mx-12 2xl:mt-5 '>
+            <div className='flex 2xl:justify-between 2xl:mx-32 2xl:mt-5 '>
                 <div className='2xl:inline-flex 2xl:space-x-5 '>
                     <div>
                         <ul className='space-y-2'>
                             {
                                 VisibleProdImage.map((image, index) => (
-                                <li key={index} className='2xl:flex 2xl:justify-center 2xl:w-20 2xl:h-20 border rounded-lg'>
-                                    <img src={image.src} alt="" className='w-16 h-20'/>
+                                <li key={index} className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-22 2xl:h-20 border rounded-lg'>
+                                    <img src={image.src} alt="" className='2xl:w-20 2xl:h-20'/>
                                 </li>
                                 ))
                             }
                         </ul>
                     </div>
 
-                    <div className='border rounded-lg'>
-                        <img src={img1} alt="" className='2xl:w-[650px] 2xl:h-[430px]'/>
+                    <div className='2xl:flex 2xl:justify-center 2xl:items-center border rounded-lg 2xl:w-[600px] 2xl:h-[430px]'>
+                        <img src={img1} alt="" className='2xl:w-[600px] 2xl:h-[430px]'/>
                     </div>
                 </div>
 
-                <div className='space-y-7'>
-                    <h1 className='border 2xl:text-4xl 2xl:w-[650px] h-20'>
+                <div className='space-y-3'>
+                    <h1 className='border 2xl:text-4xl 2xl:w-[500px] h-auto'>
                         This Ben Hogan Mens Solid Ottoman Golf Polo Shirt
                     </h1>
                     <div>
@@ -133,7 +133,36 @@ function ItemView() {
                             </ol>
                         </div>
                     </div>
+
+                    <div>
+                        <div className='flex justify-between'>
+                            <h1>Quantity</h1>
+                            <p>- 1 +</p>
+                            <span>14418 pieces avaible</span>
+                        </div>
+                    </div>
+
+                    <div className='space-y-3'>
+                        <div className='border flex justify-center text-white font-medium bg-slate-950 py-2 rounded-lg'>
+                            <button>
+                                Buy this Item
+                            </button>
+                        </div>
+                        <div className='border border-gray-700 flex justify-center text-black font-medium py-2 rounded-lg'>
+                            <button>
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div className='flex justify-between'>
+                            <button>Chat </button>
+                            <button>| Wishlist |</button>
+                            <button>Share</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div>
+                sdfsdfs
             </div>
         </div>
     )
