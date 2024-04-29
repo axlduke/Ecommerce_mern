@@ -192,6 +192,25 @@ function ItemView() {
                     </ol>
                 </div>
             </div>
+
+            <div className='2xl:mx-32 2xl:mt-10'>
+                <div>
+                    <div className='flex justify-between'>
+                        <div className='space-x-3'>
+                            <button className='font-medium w-auto py-2 px-5 rounded-lg border bg-slate-950 text-white'>Description</button>
+                            <button className='font-medium w-auto py-2 px-5 rounded-lg border border-gray-400'>Review</button>
+                        </div>
+                        <div>
+                            <button className='font-medium'>Report Product</button>
+                        </div>
+                    </div>
+
+                    <div className='2xl:mt-10'>
+                        <h1 className='text-xl font-semibold'>Products Details</h1>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
