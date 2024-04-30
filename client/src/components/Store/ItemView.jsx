@@ -244,9 +244,17 @@ function ItemView() {
 
             {/* bundle promo discound */}
             <div className='2xl:mt-12 2xl:h-80 w-full bg-slate-200'>
-                <div className='2xl:mx-12'>
-                    <div className='w-52 h-32 border border-gray-900'>
-                        <img src={img10} alt="" className='w-52 h-44'/>
+                <div className='2xl:mx-12 space-y-3'>
+                    <div className='2xl:flex 2xl:justify-between 2xl:space-x-3'>
+                        <div>
+                            <h1 className='font-medium'>Current Discount Items</h1>
+                        </div>
+                        <div>
+                            <button className='text-gray-500'>See More</button>
+                        </div>
+                    </div>
+                    <div className='w-52 h-auto border border-gray-900 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl'>
+                        <img src={img10} alt="" className='w-52 h-44 rounded-tl-xl rounded-tr-xl'/>
                         <div className='py-2 px-3'>
                             <h1 className='border border-black w-full truncate'>
                                 Product Name asdasdasd dasdsa
