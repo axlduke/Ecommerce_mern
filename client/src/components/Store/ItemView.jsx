@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
+import { TbReportAnalytics } from "react-icons/tb";
 
 import img1 from '../../assets/ProdImage/1.png'
 import img2 from '../../assets/ProdImage/2.png'
@@ -201,13 +202,62 @@ function ItemView() {
                             <button className='font-medium w-auto py-2 px-5 rounded-lg border border-gray-400'>Review</button>
                         </div>
                         <div>
-                            <button className='font-medium'>Report Product</button>
+                            <button className='font-medium flex items-center'><TbReportAnalytics/> Report Product</button>
                         </div>
                     </div>
 
-                    <div className='2xl:mt-10'>
+                    <div className='2xl:mt-10 space-y-5'>
                         <h1 className='text-xl font-semibold'>Products Details</h1>
+                        <p className='w-full h-auto text-justify text-gray-700'>
+                            This Ben Hogan Mens Solid Ottoman Golf Polo Shirt makes for versatile casual wear or golf apparel. Buil-in moisture
+                            wicking and sun protection keep you feeling dry while blocking out harmful UV rays. Durable texture Ottoman fabric and a
+                            ribbed collar with three-button placket give it classic polo style. The color makes this golf top easy to pair up with any pants
+                            or short for style that looks great both on and off the course.
+                        </p>
                         
+                        <div>
+                            <div className='flex 2xl:space-x-5'>
+                                <p className='w-52'>Package Dimensions</p>
+                                <p> : </p>
+                                <strong>27.3 x 24.8 x 4.9 cm 180g</strong>
+                            </div>
+                            <div className='flex 2xl:space-x-5'>
+                                <p className='w-52'>Specification </p>
+                                <p> : </p>
+                                <strong>Moisture Wicking, Stretchy, SPF/UV Protection, Easy Care</strong>
+                            </div>
+                            <div className='flex 2xl:space-x-5'>
+                                <p className='w-52'>Date First Available</p>
+                                <p> : </p>
+                                <strong>August 08, 2023</strong>
+                            </div>
+                            <div className='flex 2xl:space-x-5'>
+                                <p className='w-52'>Department</p>
+                                <p> : </p>
+                                <strong>Mens</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* bundle promo discound */}
+            <div className='2xl:mt-12 2xl:h-80 w-full bg-slate-200'>
+                <div className='2xl:mx-12'>
+                    <div className='w-52 h-32 border border-gray-900'>
+                        <img src={img10} alt="" className='w-52 h-44'/>
+                        <div className='py-2 px-3'>
+                            <h1 className='border border-black w-full truncate'>
+                                Product Name asdasdasd dasdsa
+                            </h1>
+                            <h2 className=' font-medium'>
+                                Php 2,500.00
+                            </h2>
+                            <span className='text-red-500'>
+                                Php 350
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
