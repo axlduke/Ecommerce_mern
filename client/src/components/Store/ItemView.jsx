@@ -243,9 +243,9 @@ function ItemView() {
 
 
             {/* bundle promo discound */}
-            <div className='2xl:mt-12 2xl:h-80 w-full bg-slate-200'>
+            <div className='2xl:mt-12 2xl:h-96 w-full bg-slate-200'>
                 <div className='2xl:mx-12 space-y-3'>
-                    <div className='2xl:flex 2xl:justify-between 2xl:space-x-3'>
+                    <div className='2xl:flex 2xl:justify-between pt-2 2xl:space-x-3'>
                         <div>
                             <h1 className='font-medium'>Current Discount Items</h1>
                         </div>
@@ -253,7 +253,7 @@ function ItemView() {
                             <button className='text-gray-500'>See More</button>
                         </div>
                     </div>
-                    <div className='w-52 h-auto border border-gray-900 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl'>
+                    <div className='w-52 h-auto bg-white border border-gray-900 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl'>
                         <img src={img10} alt="" className='w-52 h-44 rounded-tl-xl rounded-tr-xl'/>
                         <div className='py-2 px-3'>
                             <h1 className='border border-black w-full truncate'>
@@ -266,6 +266,26 @@ function ItemView() {
                                 Php 350
                             </span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Customer Reviews */}
+            <div>
+                <div>
+                    <h1>
+                        Customer Reviews
+                    </h1>
+                    <div>
+                        <div className='inline-flex'>
+                            <h1>4.8</h1>
+                            <div>
+                                <span>star</span>
+                                <h1>95% of buyers are satisfied</h1>
+                                <span>98 rating • 125 Reviews</span>
+                            </div>
+                        </div>
+                        <hr className='w-10 rotate-90 text-black bg-black'/>
                     </div>
                 </div>
             </div>
