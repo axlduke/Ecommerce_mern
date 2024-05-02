@@ -47,6 +47,15 @@ function ItemView() {
         {name: '3XL'},
     ]
 
+    const Reviews = [
+        {name: 'All', value: 190},
+        {name: '5 Stars', value: 136},
+        {name: '4 Stars', value: 33},
+        {name: '3 Stars', value: 9},
+        {name: '2 Stars', value: 10},
+        {name: '1 Stars', value: 2},
+    ]
+
     return (
         <div className=''>
             <Nav/>
@@ -273,13 +282,13 @@ function ItemView() {
             {/* Customer Reviews */}
             <div className='2xl:mt-10 2xl:mx-10'>
                 <div className=''>
-                    <h1>
+                    <h1 className=' font-medium text-3xl my-5'>
                         Customer Reviews
                     </h1>
-                    <div className='flex justify-between w-full border border-gray-400 rounded-lg p-5'>
+                    <div className='flex justify-evenly w-full border border-gray-400 rounded-lg p-5'>
                         <div className='flex items-center space-x-5'>
                             <div>
-                                <h1 className='border-4 border-black p-4 rounded-full'>4.8</h1>
+                                <h1 className='border-4 border-black p-4 rounded-full font-medium text-lg'>4.8</h1>
                             </div>
                             <div>
                                 <p>⭐⭐⭐⭐⭐</p>
@@ -339,6 +348,15 @@ function ItemView() {
                         </div>
                         <div className='flex items-center'>
                             <hr className='w-28 rotate-90 border border-black' />
+                        </div>
+                        <div className='grid grid-cols-3 gap-1'>
+                            {
+                                Reviews.map((reviews, index) => (
+                                    <div key={index} className='flex justify-center rounded-lg h-10 min-w-max items-center border border-gray-400'>
+                                        <h1 className='px-3 py-2'>{reviews.name}({reviews.value})</h1>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
