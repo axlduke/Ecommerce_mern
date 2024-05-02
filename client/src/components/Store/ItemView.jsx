@@ -56,6 +56,26 @@ function ItemView() {
         {name: '1 Stars', value: 2},
     ]
 
+    const CustomerRev = [
+        {star: '⭐⭐⭐⭐⭐', date: '07/08/2023', title: 'Cool shirts', productName: 'Nike Air', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
+        {star: '⭐⭐⭐⭐', date: '07/08/2023', title: 'Cool as cucumber', productName: 'Addidas', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
+        {star: '⭐⭐⭐', date: '07/08/2023', title: 'my Step sister', productName: 'under armour', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
+        {star: '⭐⭐', date: '07/08/2024', title: 'step bro', productName: 'vapor max', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
+    ]
+
+    const VisibleReviews = CustomerRev.slice(0, 4)
+
+    const BestSelling = [
+        {standing: '1', name: '', src: '', productName: 'Test1', starRating: '4.9', soldItem: '5k'},
+        {standing: '2', name: '', src: '', productName: 'Test2', starRating: '4.8', soldItem: '4k'},
+        {standing: '3', name: '', src: '', productName: 'Test3', starRating: '4.7', soldItem: '3k'},
+        {standing: '4', name: '', src: '', productName: 'Test4', starRating: '4.6', soldItem: '2k'},
+        {standing: '5', name: '', src: '', productName: 'Test5', starRating: '4.5', soldItem: '1k'},
+        {standing: '6', name: '', src: '', productName: 'Test6', starRating: '4.4', soldItem: '500'},
+    ]
+
+    const FilteringTopProd = BestSelling.slice(0,4)
+
     return (
         <div className=''>
             <Nav/>
@@ -353,13 +373,45 @@ function ItemView() {
                             {
                                 Reviews.map((reviews, index) => (
                                     <div key={index} className='flex justify-center rounded-lg h-10 min-w-max items-center border border-gray-400'>
-                                        <h1 className='px-3 py-2'>{reviews.name}({reviews.value})</h1>
+                                        <h1 className='px-3 py-2'>{reviews.name} ( {reviews.value} )</h1>
                                     </div>
                                 ))
                             }
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div className='2xl:mt-10 2xl:mx-10 grid grid-cols-2 gap-2'>
+                {
+                    VisibleReviews.map((customrev, index) => (
+                        <div key={index} className='border border-gray-300 p-5 rounded-lg shadow-lg'>
+                            <div className='flex justify-between'>
+                                <span>{customrev.star}</span>
+                                <p>{customrev.date}</p>
+                            </div>
+                            <h1>{customrev.title}</h1>
+                            <h3>{customrev.productName}</h3>
+                            <p>{customrev.description}</p>
+                        </div>
+                    ))
+                }
+            </div>
+            <div className='2xl:mt-10 flex justify-center'>
+                <div className='border-2 border-slate-600 px-10 pt-4 rounded-lg'>
+                    <button className='font-medium'>See All Reviews</button>
+                </div>
+            </div>
+
+            {/* Best Selling Products */}
+            <div className='2xl:mt-16'>
+                {
+                    FilteringTopProd.map((filter, index) => (
+                        <div key={index}>
+
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
