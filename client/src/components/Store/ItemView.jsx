@@ -271,21 +271,75 @@ function ItemView() {
             </div>
 
             {/* Customer Reviews */}
-            <div>
-                <div>
+            <div className='2xl:mt-10 2xl:mx-10'>
+                <div className=''>
                     <h1>
                         Customer Reviews
                     </h1>
-                    <div>
-                        <div className='inline-flex'>
-                            <h1>4.8</h1>
+                    <div className='flex justify-between w-full border border-gray-400 rounded-lg p-5'>
+                        <div className='flex items-center space-x-5'>
                             <div>
-                                <span>star</span>
-                                <h1>95% of buyers are satisfied</h1>
-                                <span>98 rating • 125 Reviews</span>
+                                <h1 className='border-4 border-black p-4 rounded-full'>4.8</h1>
+                            </div>
+                            <div>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <p className=' text-sm font-bold'>95% of buyers are satisfied</p>
+                                <span className='text-xs'>98 rating • 125 Reviews</span>
                             </div>
                         </div>
-                        <hr className='w-10 rotate-90 text-black bg-black'/>
+                        <div className='flex items-center'>
+                            <hr className='w-28 rotate-90 border border-black' />
+                        </div>
+                        <div className='flex flex-col'>
+                            <div className='flex items-center space-x-3'>
+                                <div>
+                                ⭐ 5
+                                </div>
+                                <div className="w-44 bg-gray-200 rounded-full h-2.5 dark:bg-gray-400">
+                                    <div className="bg-black h-2.5 rounded-full" style={{ width: '80%' }}></div>
+                                </div>
+                                <p className='text-sm font-medium'>136</p>
+                            </div>
+                            <div className='flex items-center space-x-3'>
+                                <div>
+                                ⭐ 4
+                                </div>
+                                <div className="w-44 bg-gray-200 rounded-full h-2.5 dark:bg-gray-400">
+                                    <div className="bg-black h-2.5 rounded-full" style={{ width: '50%' }}></div>
+                                </div>
+                                <p className='text-sm font-medium'>33</p>
+                            </div>
+                            <div className='flex items-center space-x-3'>
+                                <div>
+                                ⭐ 3
+                                </div>
+                                <div className="w-44 bg-gray-200 rounded-full h-2.5 dark:bg-gray-400">
+                                    <div className="bg-black h-2.5 rounded-full" style={{ width: '25%' }}></div>
+                                </div>
+                                <p className='text-sm font-medium'>9</p>
+                            </div>
+                            <div className='flex items-center space-x-3'>
+                                <div>
+                                ⭐ 2
+                                </div>
+                                <div className="w-44 bg-gray-200 rounded-full h-2.5 dark:bg-gray-400">
+                                    <div className="bg-black h-2.5 rounded-full" style={{ width: '14%' }}></div>
+                                </div>
+                                <p className='text-sm font-medium'>10</p>
+                            </div>
+                            <div className='flex items-center space-x-3'>
+                                <div>
+                                ⭐ 1
+                                </div>
+                                <div className="w-44 bg-gray-200 rounded-full h-2.5 dark:bg-gray-400">
+                                    <div className="bg-black h-2.5 rounded-full" style={{ width: '5%' }}></div>
+                                </div>
+                                <p className='text-sm font-medium'>2</p>
+                            </div>
+                        </div>
+                        <div className='flex items-center'>
+                            <hr className='w-28 rotate-90 border border-black' />
+                        </div>
                     </div>
                 </div>
             </div>
