@@ -3,81 +3,18 @@ import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
 import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-
-
-import img1 from '../../assets/ProdImage/1.png'
-import img2 from '../../assets/ProdImage/2.png'
-import img3 from '../../assets/ProdImage/3.png'
-import img4 from '../../assets/ProdImage/4.png'
-import img5 from '../../assets/ProdImage/5.png'
-import img6 from '../../assets/ProdImage/6.png'
-import img7 from '../../assets/ProdImage/7.png'
-import img8 from '../../assets/ProdImage/8.png'
-import img9 from '../../assets/ProdImage/9.png'
-import img10 from '../../assets/ProdImage/10.png'
-import NikeLogo from '../../assets/StoreLogo/Nike.png'
+import { FaHeart } from "react-icons/fa";
+import { ProdImage, setColorImage, ListSize, Reviews, CustomerRev, BestSelling } from './productInfo'
 
 
 function ItemView() {
-    const ProdImage = [
-        {name: 'img1', src: img1},
-        {name: 'img2', src: img2},
-        {name: 'img3', src: img3},
-        {name: 'img4', src: img4},
-        {name: 'img5', src: img5},
-        {name: 'img6', src: img6},
-        {name: 'img7', src: img7},
-    ]
-
-    const setColorImage = [
-        {name: 'Pink White', src: img1},
-        {name: 'Gray Black', src: img8},
-        {name: 'Green Black', src: img9},
-        {name: 'Gray White', src: img10},
-    ]
+    
 
     const VisibleProdImage = ProdImage.slice(0, 5)
+
     const SetColorProdImage = setColorImage.slice(0, 4)
 
-    const ListSize = [
-        {name: 'XS'},
-        {name: 'S'},
-        {name: 'M'},
-        {name: 'L'},
-        {name: 'XL'},
-        {name: '2XL'},
-        {name: '3XL'},
-    ]
-
-    const Reviews = [
-        {name: 'All', value: 190},
-        {name: '5 Stars', value: 136},
-        {name: '4 Stars', value: 33},
-        {name: '3 Stars', value: 9},
-        {name: '2 Stars', value: 10},
-        {name: '1 Stars', value: 2},
-    ]
-
-    const CustomerRev = [
-        {star: '⭐⭐⭐⭐⭐', date: '07/08/2023', title: 'Cool shirts', productName: 'Nike Air', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
-        {star: '⭐⭐⭐⭐', date: '07/08/2023', title: 'Cool as cucumber', productName: 'Addidas', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
-        {star: '⭐⭐⭐', date: '07/08/2023', title: 'my Step sister', productName: 'under armour', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
-        {star: '⭐⭐', date: '07/08/2024', title: 'step bro', productName: 'vapor max', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
-    ]
-
     const VisibleReviews = CustomerRev.slice(0, 7)
-
-    const BestSelling = [
-        {standing: '1', name: 'img2', src: img2, productName: 'Test1', starRating: '4.9', soldItem: '5k', price: '2500'},
-        {standing: '2', name: 'img3', src: img3, productName: 'Test2', starRating: '4.8', soldItem: '4k', price: '2400'},
-        {standing: '3', name: 'img4', src: img4, productName: 'Test3', starRating: '4.7', soldItem: '3k', price: '2300'},
-        {standing: '4', name: 'img5', src: img5, productName: 'Test4', starRating: '4.6', soldItem: '2k', price: '2200'},
-        {standing: '5', name: 'img6', src: img6, productName: 'Test5', starRating: '4.5', soldItem: '1k', price: '2100'},
-        {standing: '6', name: 'img7', src: img7, productName: 'Test6', starRating: '4.4', soldItem: '560', price: '1900'},
-        {standing: '7', name: 'img8', src: img8, productName: 'Test7', starRating: '4.3', soldItem: '550', price: '1800'},
-        {standing: '8', name: 'img9', src: img9, productName: 'Test8', starRating: '4.2', soldItem: '540', price: '1700'},
-        {standing: '9', name: 'img10', src: img10, productName: 'Test9', starRating: '4.1', soldItem: '530', price: '1600'},
-    ]
 
     const FilteringTopProd = BestSelling.slice(0,7)
 
@@ -96,19 +33,21 @@ function ItemView() {
 
 
     const [ currentIndex, setCurrentIndex ] = useState(0)
-    const itemsPerPage = 7
-    const maxIndex = Math.ceil(FilteringTopProd.length / itemsPerPage ) - 1
+    const ITEMS_PER_PAGE = 7
+    const maxIndex = Math.ceil(FilteringTopProd.length / ITEMS_PER_PAGE ) - 1
 
     const handleNext = () => {
+        console.log('Next button clicked');
         setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex))
     }
 
     const handlePrev = () => {
+        console.log('Prev button clicked');
         setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0))
     }
 
     useEffect(() => {
-        console.log(currentIndex);
+        console.log('Current index:', currentIndex);
     }, [currentIndex]);
 
     return (
@@ -150,7 +89,7 @@ function ItemView() {
                     </div>
 
                     <div className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-[600px] 2xl:h-[430px]'>
-                        <img src={img1} alt="" className='2xl:w-[600px] 2xl:h-[430px] border border-gray-300 rounded-lg'/>
+                        <img src={ProdImage[1]} alt="" className='2xl:w-[600px] 2xl:h-[430px] border border-gray-300 rounded-lg'/>
                     </div>
                 </div>
 
@@ -231,7 +170,7 @@ function ItemView() {
                 <div className='flex justify-between'>
                     <div className='flex items-center space-x-3'>
                         <div>
-                            <img src={NikeLogo} alt="" className='w-10 h-10 rounded-full border border-gray-400'/>
+                            <img src={ProdImage[11]} alt="" className='w-10 h-10 rounded-full border border-gray-400'/>
                         </div>
                         <div>
                             <h1 className='text-xl font-semibold'>Nike Mall</h1>
@@ -318,7 +257,7 @@ function ItemView() {
                         </div>
                     </div>
                     <div className='w-52 h-auto bg-white border border-gray-900 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl'>
-                        <img src={img10} alt="" className='w-52 h-44 rounded-tl-xl rounded-tr-xl'/>
+                        <img src={ProdImage[10]} alt="" className='w-52 h-44 rounded-tl-xl rounded-tr-xl'/>
                         <div className='py-2 px-3'>
                             <h1 className='border border-black w-full truncate'>
                                 Product Name asdasdasd dasdsa
@@ -450,14 +389,17 @@ function ItemView() {
 
             {/* Best Selling Products */}
             <div className='2xl:mt-5 2xl:mx-5 grid 2xl:grid-cols-7'>
-                {FilteringTopProd.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((filter, index) => (
+                {FilteringTopProd.slice(currentIndex * ITEMS_PER_PAGE, (currentIndex + 1) * ITEMS_PER_PAGE).map((filter, index) => (
                     <div key={index} className='w-52 border rounded-tl-xl rounded-tr-xl'>
                         <div className='relative'>
                             <TbBadgeFilled className='absolute top-1 text-5xl rotate-90' color={filter.standing === '1' ? 'gold' : filter.standing === '2' ? 'silver' : filter.standing === '3' ? 'CD7F32' : 'gray'} /> <p className='absolute top-4 left-4 text-white'>{filter.standing}</p>
+                            <div className='absolute flex justify-center items-center bg-white top-4 right-3 w-8 p-2 rounded-full'>
+                                <button><FaHeart className='text-gray-400'/></button>
+                            </div>
                         </div>
                         <img src={filter.src} alt="" className='w-full h-44 rounded-tl-xl rounded-tr-xl' />
                         <div className='2xl:mt-4 px-2'>
-                            <h1 className=' font-medium border w-full h-12 line-clamp-2'>{filter.productName}</h1>
+                            <h1 className=' font-medium w-full h-12 line-clamp-2'>{filter.productName}</h1>
                             <p className='text-gray-400 text-sm'><strong className='text-black'>⭐ {filter.starRating}</strong> • {filter.soldItem}+ Sold</p>
                             <h2 className='font-bold'>Php {parseFloat(filter.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</h2>
                         </div>
