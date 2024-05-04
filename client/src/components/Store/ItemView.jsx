@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
 import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 
 import img1 from '../../assets/ProdImage/1.png'
@@ -64,18 +65,21 @@ function ItemView() {
         {star: '⭐⭐', date: '07/08/2024', title: 'step bro', productName: 'vapor max', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
     ]
 
-    const VisibleReviews = CustomerRev.slice(0, 4)
+    const VisibleReviews = CustomerRev.slice(0, 7)
 
     const BestSelling = [
-        {standing: '1', name: '', src: '', productName: 'Test1', starRating: '4.9', soldItem: '5k'},
-        {standing: '2', name: '', src: '', productName: 'Test2', starRating: '4.8', soldItem: '4k'},
-        {standing: '3', name: '', src: '', productName: 'Test3', starRating: '4.7', soldItem: '3k'},
-        {standing: '4', name: '', src: '', productName: 'Test4', starRating: '4.6', soldItem: '2k'},
-        {standing: '5', name: '', src: '', productName: 'Test5', starRating: '4.5', soldItem: '1k'},
-        {standing: '6', name: '', src: '', productName: 'Test6', starRating: '4.4', soldItem: '500'},
+        {standing: '1', name: 'img2', src: img2, productName: 'Test1', starRating: '4.9', soldItem: '5k', price: '2500'},
+        {standing: '2', name: 'img3', src: img3, productName: 'Test2', starRating: '4.8', soldItem: '4k', price: '2400'},
+        {standing: '3', name: 'img4', src: img4, productName: 'Test3', starRating: '4.7', soldItem: '3k', price: '2300'},
+        {standing: '4', name: 'img5', src: img5, productName: 'Test4', starRating: '4.6', soldItem: '2k', price: '2200'},
+        {standing: '5', name: 'img6', src: img6, productName: 'Test5', starRating: '4.5', soldItem: '1k', price: '2100'},
+        {standing: '6', name: 'img7', src: img7, productName: 'Test6', starRating: '4.4', soldItem: '560', price: '1900'},
+        {standing: '7', name: 'img8', src: img8, productName: 'Test7', starRating: '4.3', soldItem: '550', price: '1800'},
+        {standing: '8', name: 'img9', src: img9, productName: 'Test8', starRating: '4.2', soldItem: '540', price: '1700'},
+        {standing: '9', name: 'img10', src: img10, productName: 'Test9', starRating: '4.1', soldItem: '530', price: '1600'},
     ]
 
-    const FilteringTopProd = BestSelling.slice(0,4)
+    const FilteringTopProd = BestSelling.slice(0,7)
 
     // const getBadgeColor = (standing) => {
     //     switch (standing) {
@@ -89,6 +93,23 @@ function ItemView() {
     //             return
     //     }
     // }
+
+
+    const [ currentIndex, setCurrentIndex ] = useState(0)
+    const itemsPerPage = 7
+    const maxIndex = Math.ceil(FilteringTopProd.length / itemsPerPage ) - 1
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex))
+    }
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0))
+    }
+
+    useEffect(() => {
+        console.log(currentIndex);
+    }, [currentIndex]);
 
     return (
         <div className=''>
@@ -417,18 +438,31 @@ function ItemView() {
                 </div>
             </div>
 
+            <div className='flex justify-between 2xl:mt-10 2xl:mx-5'>
+                <div>
+                    <h1 className=' font-semibold'>Best Selling</h1>
+                </div>
+                <div className='flex space-x-2'>
+                    <button onClick={handlePrev} className='flex rounded-md justify-center hover:shadow-lg py-1 w-10 border border-black'><FiArrowLeft/></button>
+                    <button onClick={handleNext} className='flex rounded-md justify-center hover:shadow-lg py-1 w-24 border bg-black text-white'><FiArrowRight/></button>
+                </div>
+            </div>
+
             {/* Best Selling Products */}
-            <div className='2xl:mt-16 grid grid-cols-4'>
-                {
-                    FilteringTopProd.map((filter, index) => (
-                        <div key={index} className='w-52'>
-                            <div className='relative'>
-                                <TbBadgeFilled className='absolute top-1 text-5xl rotate-90' color={filter.standing === '1' ? 'gold' : filter.standing === '2' ? 'silver' : filter.standing === '3' ? 'CD7F32' : 'gray'}/> <p className='absolute top-4 left-4 text-white'>{filter.standing}</p>
-                            </div>
-                            <img src="" alt="" className='w-full h-44 rounded-tl-xl rounded-tr-xl' />
+            <div className='2xl:mt-5 2xl:mx-5 grid 2xl:grid-cols-7'>
+                {FilteringTopProd.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((filter, index) => (
+                    <div key={index} className='w-52 border rounded-tl-xl rounded-tr-xl'>
+                        <div className='relative'>
+                            <TbBadgeFilled className='absolute top-1 text-5xl rotate-90' color={filter.standing === '1' ? 'gold' : filter.standing === '2' ? 'silver' : filter.standing === '3' ? 'CD7F32' : 'gray'} /> <p className='absolute top-4 left-4 text-white'>{filter.standing}</p>
                         </div>
-                    ))
-                }
+                        <img src={filter.src} alt="" className='w-full h-44 rounded-tl-xl rounded-tr-xl' />
+                        <div className='2xl:mt-4 px-2'>
+                            <h1 className=' font-medium border w-full h-12 line-clamp-2'>{filter.productName}</h1>
+                            <p className='text-gray-400 text-sm'><strong className='text-black'>⭐ {filter.starRating}</strong> • {filter.soldItem}+ Sold</p>
+                            <h2 className='font-bold'>Php {parseFloat(filter.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</h2>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
