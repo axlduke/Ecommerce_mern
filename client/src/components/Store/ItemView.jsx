@@ -1,7 +1,8 @@
 import React from 'react'
 import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
-import { TbReportAnalytics } from "react-icons/tb";
+import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
+
 
 import img1 from '../../assets/ProdImage/1.png'
 import img2 from '../../assets/ProdImage/2.png'
@@ -75,6 +76,19 @@ function ItemView() {
     ]
 
     const FilteringTopProd = BestSelling.slice(0,4)
+
+    // const getBadgeColor = (standing) => {
+    //     switch (standing) {
+    //         case '1':
+    //             return 'bg-yellow-400'
+    //         case '2':
+    //             return '#C0C0C0'
+    //         case '3':
+    //             return 'bg-yellow-400'
+    //         default:
+    //             return
+    //     }
+    // }
 
     return (
         <div className=''>
@@ -397,18 +411,21 @@ function ItemView() {
                     ))
                 }
             </div>
-            <div className='2xl:mt-10 flex justify-center'>
-                <div className='border-2 border-slate-600 px-10 pt-4 rounded-lg'>
+            <div className='2xl:mt-10 flex justify-center items-center'>
+                <div className='border-2 border-slate-600 px-10 py-2 rounded-lg'>
                     <button className='font-medium'>See All Reviews</button>
                 </div>
             </div>
 
             {/* Best Selling Products */}
-            <div className='2xl:mt-16'>
+            <div className='2xl:mt-16 grid grid-cols-4'>
                 {
                     FilteringTopProd.map((filter, index) => (
-                        <div key={index}>
-
+                        <div key={index} className='w-52'>
+                            <div className='relative'>
+                                <TbBadgeFilled className='absolute top-1 text-5xl rotate-90' color={filter.standing === '1' ? 'gold' : filter.standing === '2' ? 'silver' : filter.standing === '3' ? 'CD7F32' : 'gray'}/> <p className='absolute top-4 left-4 text-white'>{filter.standing}</p>
+                            </div>
+                            <img src="" alt="" className='w-full h-44 rounded-tl-xl rounded-tr-xl' />
                         </div>
                     ))
                 }

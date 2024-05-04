@@ -27,6 +27,11 @@ export default {
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       },
+      colors:{
+        gold: '#FFD700',
+        silver: '#C0C0C0',
+        bronze: '#CD7F32',
+      },
     },
   },
   plugins: [],
