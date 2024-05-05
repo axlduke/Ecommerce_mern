@@ -9,18 +9,11 @@ const BestSelling = ({ BestSellings }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === BestSellings.length - 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === BestSellings.length - 1 ? 0 : prevIndex - 1 === 0 ? 1 : prevIndex + 1))
     };
-
+    
     const prevSlide = () => {
-        // setCurrentIndex((prevIndex) => (prevIndex === 0 ? BestSellings.length - 1 : prevIndex - 1));
-        setCurrentIndex((prevIndex) => {
-            if(prevIndex === 1){
-                return BestSellings.length - 1;
-            } else {
-                return prevIndex - 1;
-            }
-        })
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? BestSellings.length - 1 : prevIndex - 1));
     };
     
 
@@ -40,8 +33,8 @@ const BestSelling = ({ BestSellings }) => {
                     <h1 className='font-semibold'>Best Selling</h1>
                 </div>
                 <div className='flex space-x-2'>
-                    <button onClick={prevSlide} className='flex rounded-md justify-center hover:shadow-lg py-1 w-10 border border-black'><FiArrowLeft/></button>
-                    <button onClick={nextSlide} className='flex rounded-md justify-center hover:shadow-lg py-1 w-24 border bg-black text-white'><FiArrowRight/></button>
+                    <button onClick={prevSlide} disabled={currentIndex === 0} className='flex rounded-md justify-center hover:shadow-lg py-1 w-10 border border-black'><FiArrowLeft/></button>
+                    <button onClick={nextSlide} disabled={currentIndex === BestSellings.length - 1} className='flex rounded-md justify-center hover:shadow-lg py-1 w-24 border bg-black text-white'><FiArrowRight/></button>
                 </div>
             </div>
 
