@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
 import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import { FaHeart } from "react-icons/fa";
-import { ProdImage, setColorImage, ListSize, Reviews, CustomerRev, BestSelling } from './productInfo'
+
+import { ProdImage, setColorImage, ListSize, Reviews, CustomerRev, BestSellings } from './productInfo'
+import BestSelling from './BestSelling';
 
 
 function ItemView() {
@@ -16,7 +16,7 @@ function ItemView() {
 
     const VisibleReviews = CustomerRev.slice(0, 7)
 
-    const FilteringTopProd = BestSelling.slice(0,7)
+    // const FilteringTopProd = BestSelling.slice(0,7)
 
     // const getBadgeColor = (standing) => {
     //     switch (standing) {
@@ -30,25 +30,6 @@ function ItemView() {
     //             return
     //     }
     // }
-
-
-    const [ currentIndex, setCurrentIndex ] = useState(0)
-    const ITEMS_PER_PAGE = 7
-    const maxIndex = Math.ceil(FilteringTopProd.length / ITEMS_PER_PAGE ) - 1
-
-    const handleNext = () => {
-        console.log('Next button clicked');
-        setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex))
-    }
-
-    const handlePrev = () => {
-        console.log('Prev button clicked');
-        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0))
-    }
-
-    useEffect(() => {
-        console.log('Current index:', currentIndex);
-    }, [currentIndex]);
 
     return (
         <div className=''>
@@ -376,36 +357,8 @@ function ItemView() {
                     <button className='font-medium'>See All Reviews</button>
                 </div>
             </div>
-
-            <div className='flex justify-between 2xl:mt-10 2xl:mx-5'>
-                <div>
-                    <h1 className=' font-semibold'>Best Selling</h1>
-                </div>
-                <div className='flex space-x-2'>
-                    <button onClick={handlePrev} className='flex rounded-md justify-center hover:shadow-lg py-1 w-10 border border-black'><FiArrowLeft/></button>
-                    <button onClick={handleNext} className='flex rounded-md justify-center hover:shadow-lg py-1 w-24 border bg-black text-white'><FiArrowRight/></button>
-                </div>
-            </div>
-
             {/* Best Selling Products */}
-            <div className='2xl:mt-5 2xl:mx-5 grid 2xl:grid-cols-7'>
-                {FilteringTopProd.slice(currentIndex * ITEMS_PER_PAGE, (currentIndex + 1) * ITEMS_PER_PAGE).map((filter, index) => (
-                    <div key={index} className='w-52 border rounded-tl-xl rounded-tr-xl'>
-                        <div className='relative'>
-                            <TbBadgeFilled className='absolute top-1 text-5xl rotate-90' color={filter.standing === '1' ? 'gold' : filter.standing === '2' ? 'silver' : filter.standing === '3' ? 'CD7F32' : 'gray'} /> <p className='absolute top-4 left-4 text-white'>{filter.standing}</p>
-                            <div className='absolute flex justify-center items-center bg-white top-4 right-3 w-8 p-2 rounded-full'>
-                                <button><FaHeart className='text-gray-400'/></button>
-                            </div>
-                        </div>
-                        <img src={filter.src} alt="" className='w-full h-44 rounded-tl-xl rounded-tr-xl' />
-                        <div className='2xl:mt-4 px-2'>
-                            <h1 className=' font-medium w-full h-12 line-clamp-2'>{filter.productName}</h1>
-                            <p className='text-gray-400 text-sm'><strong className='text-black'>⭐ {filter.starRating}</strong> • {filter.soldItem}+ Sold</p>
-                            <h2 className='font-bold'>Php {parseFloat(filter.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</h2>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <BestSelling BestSellings={BestSellings} />
         </div>
     )
 }

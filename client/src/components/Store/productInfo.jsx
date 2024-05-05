@@ -68,7 +68,7 @@ export const CustomerRev = [
     {star: '⭐⭐', date: '07/08/2024', title: 'step bro', productName: 'vapor max', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias voluptatem voluptatibus eius dignissimos quae possimus facilis delectus officiis ducimus'},
 ]
 
-export const BestSelling = [
+export const BestSellings = [
     {standing: '1', name: 'img2', src: img2, productName: 'Test1', starRating: '4.9', soldItem: '5k', price: '2500'},
     {standing: '2', name: 'img3', src: img3, productName: 'Test2', starRating: '4.8', soldItem: '4k', price: '2400'},
     {standing: '3', name: 'img4', src: img4, productName: 'Test3', starRating: '4.7', soldItem: '3k', price: '2300'},
