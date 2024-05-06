@@ -3,7 +3,7 @@ import Nav from '../Route/Nav'
 import { Link } from 'react-router-dom'
 import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
 
-import { ProdImage, setColorImage, ListSize, Reviews, CustomerRev, BestSellings } from './productInfo'
+import { ProdImage, ProdImages, setColorImage, ListSize, Reviews, CustomerRev, BestSellings } from './productInfo'
 import BestSelling from './BestSelling';
 import Thumbnail from './Thumbnail';
 
@@ -15,7 +15,7 @@ function ItemView() {
 
     const VisibleReviews = CustomerRev.slice(0, 7)
 
-    const [mainImage, setMainImage ] = useState(ProdImage)
+    const [mainImage, setMainImage ] = useState(ProdImages)
 
     // console.log(ProdImages)
     // const FilteringTopProd = BestSelling.slice(0,7)
@@ -157,11 +157,11 @@ function ItemView() {
                     </div>
                 </div>
                 <div>
-                    <ol className='flex justify-between'>
+                    <ol className='flex justify-between text-sm'>
                         <li className='text-gray-600'>
                             Rating Store : <strong>96%</strong>
                         </li>
-                        <li>
+                        <li className='w-96 truncate'>
                             Location Store : <strong>Manila Makati</strong>
                         </li>
                         <li>

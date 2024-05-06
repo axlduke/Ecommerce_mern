@@ -6,7 +6,7 @@ const Thumbnail = ({ setMainImage }) => {
 
     const VisibleProdImage = ProdImage.slice(0, 5)
 
-    const defaultMainImage = ProdImages
+    const defaultMainImage = ProdImages[0].src
 
     const [ mainImage, setLocalMainImage ] = useState(defaultMainImage)
 
