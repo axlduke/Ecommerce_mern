@@ -10,6 +10,10 @@ import img9 from '../../assets/ProdImage/9.png';
 import img10 from '../../assets/ProdImage/10.png';
 import NikeLogo from '../../assets/StoreLogo/Nike.png';
 
+export const ProdImages = [
+    img1,
+]
+
 export const ProdImage = [
     {name: 'img1', src: img1},
     {name: 'img2', src: img2},

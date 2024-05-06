@@ -5,17 +5,19 @@ import { TbReportAnalytics, TbBadgeFilled } from "react-icons/tb";
 
 import { ProdImage, setColorImage, ListSize, Reviews, CustomerRev, BestSellings } from './productInfo'
 import BestSelling from './BestSelling';
+import Thumbnail from './Thumbnail';
 
 
 function ItemView() {
     
 
-    const VisibleProdImage = ProdImage.slice(0, 5)
-
     const SetColorProdImage = setColorImage.slice(0, 4)
 
     const VisibleReviews = CustomerRev.slice(0, 7)
 
+    const [mainImage, setMainImage ] = useState(ProdImage)
+
+    // console.log(ProdImages)
     // const FilteringTopProd = BestSelling.slice(0,7)
 
     // const getBadgeColor = (standing) => {
@@ -57,20 +59,11 @@ function ItemView() {
             {/* fetching Image for Product */}
             <div className='flex 2xl:justify-between 2xl:mx-32 2xl:mt-5 '>
                 <div className='2xl:inline-flex 2xl:space-x-5 '>
-                    <div>
-                        <ul className='space-y-2'>
-                            {
-                                VisibleProdImage.map((image, index) => (
-                                <li key={index} className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-22 2xl:h-20'>
-                                    <img src={image.src} alt="" className='2xl:w-20 2xl:h-20 border border-gray-300 rounded-lg'/>
-                                </li>
-                                ))
-                            }
-                        </ul>
-                    </div>
+
+                    <Thumbnail setMainImage={ setMainImage } /> 
 
                     <div className='2xl:flex 2xl:justify-center 2xl:items-center 2xl:w-[600px] 2xl:h-[430px]'>
-                        <img src={ProdImage[1]} alt="" className='2xl:w-[600px] 2xl:h-[430px] border border-gray-300 rounded-lg'/>
+                        <img src={mainImage} alt="" className='2xl:w-[600px] 2xl:h-[430px] border border-gray-300 rounded-lg'/>
                     </div>
                 </div>
 
