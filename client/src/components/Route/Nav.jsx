@@ -1,10 +1,13 @@
-import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
+// import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
+import { IoMdBasket } from "react-icons/io";
+import { BiSolidBell } from "react-icons/bi";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 
 const Nav = () => {
     return (
         <div className="fixed top-0 w-full bg-white shadow-md z-10">
             {/*margin for navigation */}
-            <div className='m-3'> 
+            {/* <div className='m-3'> 
                 <div className="flex justify-between">
                 
                     <div className=" flex items-center space-x-4">
@@ -48,6 +51,45 @@ const Nav = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div> */}
+            <div className="flex justify-end py-2 border border-b-2">
+                <ul className="inline-flex space-x-5 mx-9">
+                    <li className="text-gray-400 hover:text-gray-500 transition ease-in-out cursor-pointer">Home BeliBeli</li>
+                    <li className="text-gray-400 hover:text-gray-500 transition ease-in-out cursor-pointer">Abot BeliBeli</li>
+                    <li className="text-gray-400 hover:text-gray-500 transition ease-in-out cursor-pointer">Promo</li>
+                    <li>|</li>
+                    <li className="hover:text-gray-500 transition ease-in-out cursor-pointer font-medium">Sign Up</li>
+                    <li>|</li>
+                    <li className="hover:text-gray-500 transition ease-in-out cursor-pointer font-medium">Login</li>
+                </ul>
+            </div>
+            <div className="flex items-center justify-evenly py-3">
+                <div>
+                    <h1 className=" text-2xl font-medium">BeliBeli.com</h1>
+                </div>
+                <div className="flex">
+                    <div className="border-t-l-2 border rounded-tl-lg rounded-bl-lg">
+                        <select name="" id="" className="outline-none px-5 py-1">
+                            <option value="" disabled>All Category</option>
+                            <option value="" >T-Shirt</option>
+                            <option value="" >Jacket</option>
+                            <option value="" >Shirt</option>
+                            <option value="" >Jeans</option>
+                            <option value="" >Bag</option>
+                            <option value="" >Shoes</option>
+                            <option value="" >Watches</option>
+                            <option value="" >Cap</option>
+                        </select>
+                    </div>
+                    <div className="relative">
+                        <input type="text"  className="pl-10 py-1 border outline-none w-[850px] rounded-tr-lg rounded-br-lg" placeholder="Search product or brand here..."/>
+                        <HiMagnifyingGlass className="absolute top-2 left-3"/>
+                    </div>
+                </div>
+                <div className="space-x-5">
+                    <button className="p-2 text-2xl text-gray-400 hover:text-gray-500 transition ease-in-out"><IoMdBasket/></button>
+                    <button className="p-2 text-2xl text-gray-400 hover:text-gray-500 transition ease-in-out"><BiSolidBell/></button>
                 </div>
             </div>
         </div>
